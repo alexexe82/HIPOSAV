@@ -76,7 +76,7 @@ gpu.setForeground(0x66B6FF)
 term.setCursor (centrX - 18, 1)
 print ("Installation HIPOS android version.")
 term.setCursor (centrX - 20, 2)
-print ("Устанавливается ОС HIPOS анроид версия.")
+print ("Устанавливается ОС HIPOS андроид версия.")
 term.setCursor (scr1X - 46, scr1Y - 16)
 logoandroid = {
 "           ▄                     ▄       ",
