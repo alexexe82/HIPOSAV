@@ -116,7 +116,7 @@ local function unserializeFile(path)
 	return data
 end
 
--- print("Downloading MineOS file list...")
+-- print("Downloading HIPOS file list...")
 local path = "/HIPOSAV/System/Files.cfg"
 local URLs = {
 applicationList = "https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/master/files.cfg",
