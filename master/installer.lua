@@ -46,7 +46,8 @@ end
 
 local function wget(url, path)
 	fs.makeDirectory(fs.path(path))
-	shell.execute("wget " .. url .. " " .. path .. " -fq")
+	-- shell.execute("wget " .. url .. " " .. path .. " -fq")
+	loadfile("/bin/wget.lua")(url, path, "-fQ")
 end
 
 local function unserializeFile(path)
