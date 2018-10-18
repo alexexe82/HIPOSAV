@@ -128,15 +128,15 @@ print ("")
 
 for i = 2, scr1X - 48 do
 term.setCursor (i, scr1Y - 16)
-print ("═")
+print ("║")
 term.setCursor (i, scr1Y - 1)
-print ("═")
+print ("║")
 end
 for i = scr1Y - 15, scr1Y - 2 do
 term.setCursor (1, i)
-print ("═")
+print ("║")
 term.setCursor (scr1X - 47, i)
-print ("═")
+print ("║")
 end
 
         for i = 1, #applicationList.preInstall do
@@ -157,7 +157,7 @@ end
 		infproc = math.ceil((#loadinfo/100)*procent)
 	for infstr = 1,5 do
 		term.setCursor (1, scr1Y - 14 + infstr)
-                print (loadinfo[ifproc][infstr])
+                print (loadinfo[infproc][infstr])
 	end
 	
 	wget(applicationList.preInstall[i].url, applicationList.preInstall[i].path)
