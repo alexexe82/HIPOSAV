@@ -70,7 +70,7 @@ fs.remove(path)
         for i = 1, #applicationList.preInstall do
 	du = math.ceil((100/#applicationList.preInstall)*i)
         term.setCursor (1, 3)
-	print("Downloading library \" .. fs.name(applicationList.preInstall[i].path) .. "\          ")
+	-- print("Downloading library \" .. fs.name(applicationList.preInstall[i].path) .. "\          ")
 		for d = 1,du do
 		term.setCursor (1, 4)
 		print (du,d)
