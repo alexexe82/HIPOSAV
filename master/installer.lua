@@ -69,7 +69,10 @@ if scr1X > 100 or scr1Y > 30 then
 scr1X,scr1Y = 100,30
 gpu.setResolution(scr1X,scr1Y)
 end
+
 centrX,centrY = math.ceil(scr1X/2), math.ceil(scr1Y/2)
+
+gpu.setForeground(0x66B6FF)
 term.setCursor (centrX - 18, 1)
 print ("Installation HIPOS android version.")
 term.setCursor (centrX - 20, 2)
@@ -177,5 +180,16 @@ print ("ИНФОРМАЦИЯ")
 	wget(applicationList.preInstall[i].url, applicationList.preInstall[i].path)
 	end
 
+gpu.setForeground(0xFFB680)
+
+for i = 1,5 do
+	sec = 6 - i
+ term.setCursor (centrX - 15, 8)
+ print ("Перезапуск системы через "..sec.." сек")
+	os.sleep(1)
+end	
+
+
 gpu.setForeground(0x66B6FF)
-io.read()
+shell.execute(reboot)
+--io.read()
