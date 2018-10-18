@@ -84,13 +84,15 @@ print ("")
         term.setCursor (1, 3)
 	-- print("Downloading library \" .. fs.name(applicationList.preInstall[i].path) .. "\          ")
 		for d = 0,du do
-		term.setCursor ((centrX - 13)+1+d, 5)
+		procent = math.ceil((24/100)*d)
+		term.setCursor ((centrX - 13)+1+procent, 5)
 		print ("█")
-		term.setCursor (centrX - string.len(applicationList.preInstall[i].path+1), 8)
-		print ("                                                   ")
-		term.setCursor (centrX - string.len(applicationList.preInstall[i].path+1), 8)
-		print (du.." "..applicationList.preInstall[i].path)
 		end
+		term.setCursor (centrX - string.len(applicationList.preInstall[i].path) + 1, 8)
+		print ("                                                   ")
+		term.setCursor (centrX - string.len(applicationList.preInstall[i].path) + 1, 8)
+		print (du.." "..applicationList.preInstall[i].path)
+		
 	wget(applicationList.preInstall[i].url, applicationList.preInstall[i].path)
 	end
 
