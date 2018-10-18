@@ -70,10 +70,10 @@ scr1X,scr1Y = 100,30
 gpu.setResolution(scr1X,scr1Y)
 end
 centrX,centrY = math.ceil(scr1X/2), math.ceil(scr1Y/2)
-term.setCursor (centrX - 25, 1)
-print ("Version in developed... press enter for continue")
-term.setCursor (centrX - 30, 2)
-print ("Версия находится в разработке... нажмите enter для продолжения")
+term.setCursor (centrX - 18, 1)
+print ("Installation HIPOS android version.")
+term.setCursor (centrX - 20, 2)
+print ("Устанавливается ОС HIPOS анроид версия.")
 term.setCursor (scr1X - 46, scr1Y - 16)
 logoandroid = {
 "           ▄                     ▄       ",
