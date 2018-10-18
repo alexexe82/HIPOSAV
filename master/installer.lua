@@ -15,6 +15,8 @@ local args, options = shell.parse(...)
 print ("Version in developed... press enter for continue")
 print ("Версия находится в разработке... нажмите enter для продолжения")
 scr1X, scr1Y = gpu.getResolution()
+centrX,centrY = math.ceil(scr1X/2), math.ceil(scr1Y/2)
+
 term.setCursor (scr1X - 46, scr1Y - 16)
 logoandroid = {
 "           ▄                     ▄       ",
@@ -66,14 +68,28 @@ wget(URLs.applicationList, path)
 applicationList = unserializeFile(path)
 fs.remove(path)
 
+term.setCursor (centrX - 13, 4)
+print ("╔════════════════════════╗")
+term.setCursor (centrX - 13, 5)
+print ("║░░░░░░░░░░░░░░░░░░░░░░░░║")
+term.setCursor (centrX - 13, 6)
+print ("╚════════════════════════╝")
+term.setCursor (centrX - 8, 7)
+print ("                            ")
+term.setCursor (centrX - 13, 7)
+print ("")
 
         for i = 1, #applicationList.preInstall do
 	du = math.ceil((100/#applicationList.preInstall)*i)
         term.setCursor (1, 3)
 	-- print("Downloading library \" .. fs.name(applicationList.preInstall[i].path) .. "\          ")
-		for d = 1,du do
-		term.setCursor (1, 4)
-		print (du,d,applicationList.preInstall[i].path)
+		for d = 0,du do
+		term.setCursor ((centrX - 13)+1+d, 5)
+		print ("█")
+		term.setCursor (centrX - string.len(applicationList.preInstall[i].path+1), 8)
+		print ("                                                   ")
+		term.setCursor (centrX - string.len(applicationList.preInstall[i].path+1), 8)
+		print (du.." "..applicationList.preInstall[i].path)
 		end
 	wget(applicationList.preInstall[i].url, applicationList.preInstall[i].path)
 	end
