@@ -161,7 +161,7 @@ end
 	end
 		term.setCursor (centrX - math.ceil(string.len(applicationList.preInstall[i].path.."      ")/2), 8)
 		print (applicationList.preInstall[i].path.." ("..du.."%)")
-		infproc = math.ceil(((#loadinfo)/100)*du)
+		infproc = math.ceil(((#loadinfo-1)/100)*du)
 	        print(infproc.." ")
 	for infstr = 1,5 do
 		term.setCursor (2, scr1Y - 14 + infstr)
