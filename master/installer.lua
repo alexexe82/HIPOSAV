@@ -11,6 +11,50 @@ local screen = component.screen
 
 local args, options = shell.parse(...)
 
+local loadinfo = {
+{
+		"Если Вы находитесь в консоли  ",
+		"и хотите вернуться в оболочку ",
+		"наберите cd // чтоб перейти в ",
+		"корневой каталог, а затем     ",
+		"наберите HIPOS.lua            ",
+},
+	{
+		"Для управления наноботами     ",
+		"с планешета не забудьте       ",
+		"установить в него плату       ",
+		"беспроводной связи и зарядить ",
+		"планшет и наноботов.          ",
+},
+	{
+		"Если Вы обнаружили опечатку   ",
+		"или баг или вам просто не     ",
+		"нравится что-то в коде        ",
+		"можете смело исправлять и, при",
+		"желании, сообщить мне.        ",
+},
+	{
+		"В сборнике программ           ",
+		"используется код сторонних    ",
+		"программистов, я благодарю    ",
+		"всех кто участвовал и помогал,",
+		"и тех кто просто играет.      ",
+},
+	{
+		"Спасибо за то, что выбрали    ",
+		"эту графическую оболочку.     ",
+		"Это значит, что мое время     ",
+		"было потрачено не напрасно.   ",
+		"Приятной игры! =)             ",
+},
+	{
+		"Спасибо за то, что выбрали    ",
+		"эту графическую оболочку.     ",
+		"Это значит, что мое время     ",
+		"было потрачено не напрасно.   ",
+		"Приятной игры! =)             ",
+},
+	}
  term.clear()
 
 scr1X, scr1Y = gpu.getResolution()
@@ -82,6 +126,19 @@ print ("                            ")
 term.setCursor (centrX - 13, 7)
 print ("")
 
+for i = 2, scr1X - 48 do
+term.setCursor (i, scr1Y - 16)
+print ("═")
+term.setCursor (i, scr1Y - 1)
+print ("═")
+end
+for i = scr1Y - 15, scr1Y - 2 do
+term.setCursor (1, i)
+print ("═")
+term.setCursor (scr1X - 47, i)
+print ("═")
+end
+
         for i = 1, #applicationList.preInstall do
 	du = math.ceil((100/#applicationList.preInstall)*i)
         term.setCursor (1, 3)
@@ -97,7 +154,12 @@ print ("")
 	end
 		term.setCursor (centrX - math.ceil(string.len(applicationList.preInstall[i].path.."      ")/2), 8)
 		print (applicationList.preInstall[i].path.." ("..du.."%)")
-		
+		infproc = math.ceil((#loadinfo/100)*procent)
+	for infstr = 1,5 do
+		term.setCursor (1, scr1Y - 14 + infstr)
+                print (loadinfo[ifproc][infstr])
+	end
+	
 	wget(applicationList.preInstall[i].url, applicationList.preInstall[i].path)
 	end
 
