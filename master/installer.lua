@@ -12,11 +12,13 @@ local screen = component.screen
 local args, options = shell.parse(...)
 
  term.clear()
-print ("Version in developed... press enter for continue")
-print ("Версия находится в разработке... нажмите enter для продолжения")
+
 scr1X, scr1Y = gpu.getResolution()
 centrX,centrY = math.ceil(scr1X/2), math.ceil(scr1Y/2)
-
+term.setCursor (centrX - 25, 1)
+print ("Version in developed... press enter for continue")
+term.setCursor (centrX - 30, 2)
+print ("Версия находится в разработке... нажмите enter для продолжения")
 term.setCursor (scr1X - 46, scr1Y - 16)
 logoandroid = {
 "           ▄                     ▄       ",
@@ -43,6 +45,7 @@ end
 
 -- gpu.setForeground(0x66B6FF)
 if not _G._OSVERSION or tonumber(_G._OSVERSION:sub(8, 10)) < 1.5 then
+	term.setCursor (centrX - 40, 2)
 	print ("Old version of OpenComputers mod detected: MineOS requires OpenComputers 1.5 or newer to work properly !")
 end
 
