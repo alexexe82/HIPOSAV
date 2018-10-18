@@ -58,8 +58,8 @@ end
 
 -- print("Downloading MineOS file list...")
 local path = "/HIPOSAV/System/Files.cfg"
-local fcfg = "https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/master/files.cfg"
-wget(fcfg, path)
+applicationList = "https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/master/files.cfg"
+wget(applicationList, path)
 applicationList = unserializeFile(path)
 fs.remove(path)
 
