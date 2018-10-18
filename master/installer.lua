@@ -92,7 +92,7 @@ print ("")
 		term.setCursor (clstr, 8)
 		print (" ")
 	end
-		term.setCursor (centrX - math.ceil((string.len(applicationList.preInstall[i].path) + 1)/2), 8)
+		term.setCursor (centrX - math.ceil((string.len(applicationList.preInstall[i].path) - 2)/2), 8)
 		print (applicationList.preInstall[i].path.." ("..du.."%)")
 		
 	wget(applicationList.preInstall[i].url, applicationList.preInstall[i].path)
