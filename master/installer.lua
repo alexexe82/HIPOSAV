@@ -11,8 +11,6 @@ local screen = component.screen
 
 local args, options = shell.parse(...)
 
-fcfg = "https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/master/files.cfg"
-
  term.clear()
 print ("Version in developed... press enter for continue")
 print ("Версия находится в разработке... нажмите enter для продолжения")
@@ -60,12 +58,13 @@ end
 
 -- print("Downloading MineOS file list...")
 local path = "/HIPOSAV/System/Files.cfg"
+local fcfg = "https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/master/files.cfg"
 wget(fcfg, path)
 applicationList = unserializeFile(path)
 fs.remove(path)
 
 for i = 1, #applicationList.preInstall do
- term.setCursor (scr1X/4, 4)
+ term.setCursor (1, 4)
 	--print("Downloading library \" .. fs.name(applicationList.preInstall[i].path) .. "\          ")
 	wget(applicationList.preInstall[i].url, applicationList.preInstall[i].path)
 	end
