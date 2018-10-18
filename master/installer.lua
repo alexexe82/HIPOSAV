@@ -65,6 +65,9 @@ local loadinfo = {
  term.clear()
 
 scr1X, scr1Y = gpu.getResolution()
+if scr1X > 100 or scr1Y > 30 then
+scr1X,scr1Y = 100,30	
+end
 centrX,centrY = math.ceil(scr1X/2), math.ceil(scr1Y/2)
 term.setCursor (centrX - 25, 1)
 print ("Version in developed... press enter for continue")
