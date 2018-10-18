@@ -145,6 +145,8 @@ print ("║")
 term.setCursor (scr1X - 47, i)
 print ("║")
 end
+term.setCursor (((scr1X - 47)/2)-4, scr1Y - 15)
+print ("ИНФОРМАЦИЯ")
 
         for i = 1, #applicationList.preInstall do
 	du = math.ceil((100/#applicationList.preInstall)*i)
@@ -162,7 +164,7 @@ end
 		term.setCursor (centrX - math.ceil(string.len(applicationList.preInstall[i].path.."      ")/2), 8)
 		print (applicationList.preInstall[i].path.." ("..du.."%)")
 		infproc = math.ceil(((#loadinfo-1)/100)*du)
-	        print(infproc.." ")
+	        -- print(infproc.." ")
 	for infstr = 1,5 do
 		term.setCursor (2, scr1Y - 14 + infstr)
                 print (loadinfo[infproc][infstr])
