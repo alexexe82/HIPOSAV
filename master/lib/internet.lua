@@ -36,7 +36,7 @@ function internet.request(url, data, headers)
     ["()"] = "function():string -- Tries to read data from the socket stream and return the read byte array.",
     close = setmetatable({},
     {
-      __call = request.close,
+      __call = function() request.close() end,
       __tostring = function() return "function() -- closes the connection" end
     })
   },
