@@ -134,12 +134,12 @@ term.setCursor (centrX - 13, 7)
 print ("")
 
 for i = 2, scr1X - 48 do
-term.setCursor (i, scr1Y - 16)
+term.setCursor (i, scr1Y - 15)
 print ("═")
 term.setCursor (i, scr1Y - 1)
 print ("═")
 end
-for i = scr1Y - 15, scr1Y - 2 do
+for i = scr1Y - 14, scr1Y - 2 do
 term.setCursor (1, i)
 print ("║")
 term.setCursor (scr1X - 47, i)
