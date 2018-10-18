@@ -39,7 +39,7 @@ term.setCursor (scr1X - 44, scr1Y - 16 + i)
 print (logoandroid[i])
 end
 
-gpu.setForeground(0x66B6FF)
+-- gpu.setForeground(0x66B6FF)
 if not _G._OSVERSION or tonumber(_G._OSVERSION:sub(8, 10)) < 1.5 then
 	print ("Old version of OpenComputers mod detected: MineOS requires OpenComputers 1.5 or newer to work properly !")
 end
@@ -66,9 +66,15 @@ wget(URLs.applicationList, path)
 applicationList = unserializeFile(path)
 fs.remove(path)
 
+
         for i = 1, #applicationList.preInstall do
-        term.setCursor (1, 4)
-	--print("Downloading library \" .. fs.name(applicationList.preInstall[i].path) .. "\          ")
+	du = math.ceil((100/#applicationList.preInstall)*i)
+        term.setCursor (1, 3)
+	print("Downloading library \" .. fs.name(applicationList.preInstall[i].path) .. "\          ")
+		for d = 1,du do
+		term.setCursor (1, 4)
+		print (du,d)
+		end
 	wget(applicationList.preInstall[i].url, applicationList.preInstall[i].path)
 	end
 
