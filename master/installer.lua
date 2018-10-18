@@ -66,7 +66,7 @@ fs.remove(path)
 
 for i = 1, #applicationList.preInstall do
  term.setCursor (scr1X/4, 4)
-	print("Downloading library \" .. fs.name(applicationList.preInstall[i].path) .. "\          ")
+	--print("Downloading library \" .. fs.name(applicationList.preInstall[i].path) .. "\          ")
 	wget(applicationList.preInstall[i].url, applicationList.preInstall[i].path)
 	end
 
