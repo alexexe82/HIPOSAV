@@ -88,7 +88,7 @@ print ("")
 		term.setCursor ((centrX - 13)+1+procent, 5)
 		print ("█")
 		end
-		term.setCursor (centrX - math.ceil((string.len(applicationList.preInstall[i].path) + 1)/2), 8)
+		term.setCursor (centrX - math.ceil((string.len(applicationList.preInstall[i].path) - 8)/2), 8)
 		print ("                                                            ")
 		term.setCursor (centrX - math.ceil((string.len(applicationList.preInstall[i].path) + 1)/2), 8)
 		print (applicationList.preInstall[i].path.." ("..du.."%)")
