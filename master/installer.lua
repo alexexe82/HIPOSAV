@@ -58,13 +58,15 @@ end
 
 -- print("Downloading MineOS file list...")
 local path = "/HIPOSAV/System/Files.cfg"
-applicationList = "https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/master/files.cfg"
-wget(applicationList, path)
+local URLs = {
+applicationList = "https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/master/files.cfg",
+	}
+wget(URLs.applicationList, path)
 applicationList = unserializeFile(path)
 fs.remove(path)
 
-for i = 1, #applicationList.preInstall do
- term.setCursor (1, 4)
+        for i = 1, #applicationList.preInstall do
+        term.setCursor (1, 4)
 	--print("Downloading library \" .. fs.name(applicationList.preInstall[i].path) .. "\          ")
 	wget(applicationList.preInstall[i].url, applicationList.preInstall[i].path)
 	end
