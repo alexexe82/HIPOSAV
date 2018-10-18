@@ -54,6 +54,13 @@ local loadinfo = {
 		"было потрачено не напрасно.   ",
 		"Приятной игры! =)             ",
 },
+		{
+		"Спасибо за то, что выбрали    ",
+		"эту графическую оболочку.     ",
+		"Это значит, что мое время     ",
+		"было потрачено не напрасно.   ",
+		"Приятной игры! =)             ",
+},
 	}
  term.clear()
 
@@ -128,9 +135,9 @@ print ("")
 
 for i = 2, scr1X - 48 do
 term.setCursor (i, scr1Y - 16)
-print ("║")
+print ("═")
 term.setCursor (i, scr1Y - 1)
-print ("║")
+print ("═")
 end
 for i = scr1Y - 15, scr1Y - 2 do
 term.setCursor (1, i)
@@ -154,10 +161,10 @@ end
 	end
 		term.setCursor (centrX - math.ceil(string.len(applicationList.preInstall[i].path.."      ")/2), 8)
 		print (applicationList.preInstall[i].path.." ("..du.."%)")
-		infproc = math.ceil((#loadinfo/100)*procent)
+		infproc = math.ceil(((#loadinfo+1)/100)*procent)
 	        print(infproc.." ")
 	for infstr = 1,5 do
-		term.setCursor (1, scr1Y - 14 + infstr)
+		term.setCursor (2, scr1Y - 14 + infstr)
                 print (loadinfo[infproc][infstr])
 	end
 	
