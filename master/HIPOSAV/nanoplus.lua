@@ -74,7 +74,7 @@ event.listen("modem_message", listener)
 
 local xFace, yFace = 2, 2
 local xInfo, yInfo = xFace + 16 + 2, yFace
-local imageCyka = image.load("HIPOS/IconsPic/logoN1.pic")
+local imageCyka = image.load("HIPOSAV/IconsPic/logoN1.pic")
 --image.draw(xFace, yFace, imageCyka)
 
 local function tb(tmr)

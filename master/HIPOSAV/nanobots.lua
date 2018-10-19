@@ -5,7 +5,7 @@ local component = require("component")
 local term = require("term")
 
 local gpu = component.gpu
-local LogoNano = image.load("/HIPOS/IconsPic/LogoNano.pic")
+local LogoNano = image.load("/HIPOSAV/IconsPic/LogoNano.pic")
 local modem = component.modem
 --ecs.clearScreen(0x000040)
 --component.gpu.setResolution(100,40)
