@@ -30,7 +30,7 @@ local floppyIcon = image.load("/HIPOS/IconsPic/Floppy.pic")
 local updateIcon = image.load("/HIPOS/IconsPic/Update.pic")
 
 local x, y = "auto", "auto"
-local width, height = 84, 26
+local width, height = 68, 22
 x, y = ecs.correctStartCoords(x, y, width, height)
 local heightOfTopBar = 3
 
@@ -57,7 +57,7 @@ end
 
 --Рисем цветные кружочки слева вверху
 local function drawCloses()
-local symbol = "⮾"
+local symbol = "▓"
 gpu.setBackground(colors.topBar)
 local yPos = y
 ecs.colorText(x + 1, yPos , colors.closes.cross, symbol)
@@ -127,13 +127,13 @@ local function drawMain()
 ecs.square(x, y + heightOfTopBar, width, height - heightOfTopBar, colors.main)
 local xPos, yPos
 if currentMode == 1 then
-xPos, yPos = x + 3, y + heightOfTopBar + 3
+xPos, yPos = x + 1, y + heightOfTopBar + 1
 image.draw(xPos, yPos, osIcon)
-xPos, yPos = x + 36, yPos + 3
-ecs.colorTextWithBack(xPos, yPos, 0x000000, colors.main, "HIPOS"); yPos = yPos + 1
-ecs.colorText(xPos, yPos, ecs.colors.lightGray, "Версия 1.2"); yPos = yPos + 2
+xPos, yPos = x + 1, yPos + 5
+ecs.colorTextWithBack(xPos, yPos, 0x000000, colors.main, "HIPOS (Android Version)"); yPos = yPos + 1
+ecs.colorText(xPos, yPos, ecs.colors.lightGray, "Версия 2.0"); yPos = yPos + 2
 
-ecs.smartText(xPos, yPos, "§fСистемный блок §8(3 уровень, выше некуда.)"); yPos = yPos + 1
+ecs.smartText(xPos, yPos, "§fСистемный блок §8(3 уровень)"); yPos = yPos + 1
 ecs.smartText(xPos, yPos, "§fПроцессор §8(3 уровень, почти Пентиум)"); yPos = yPos + 1
 ecs.smartText(xPos, yPos, "§fПамять §8(DDR5 с охлаждением "..ram.total.." KB)"); yPos = yPos + 1
 ecs.smartText(xPos, yPos, "§fГрафика §8(GTX ГеФорс 1048i)"); yPos = yPos + 1
@@ -158,15 +158,15 @@ if bootAddress == HDDs[i].address then load = " §eзагрузочный§8," e
 ecs.smartText(xPos, yPos, ecs.stringLimit("end", "§f" .. (HDDs[i].label or "Безымянный диск") .. "§8,"..load.." " .. HDDs[i].address, 58)); yPos = yPos + 2
 --Рисуем прогрессбар
 local percent = math.ceil(HDDs[i].spaceUsed / HDDs[i].spaceTotal * 100)
-ecs.progressBar(xPos, yPos, 50, 1, 0xdddddd, ecs.colors.blue, percent)
+ecs.progressBar(xPos, yPos, 40, 1, 0xdddddd, ecs.colors.blue, percent)
 yPos = yPos + 1
 ecs.colorTextWithBack(xPos + 10, yPos, 0xaaaaaa, colors.main, HDDs[i].spaceUsed.." из "..HDDs[i].spaceTotal.." KB использовано"); yPos = yPos + 1
 
 ecs.separator(x, yPos, width - 1, colors.main, 0xdddddd)
 
 --Рисуем кнопы
-xPos, yPos = x + 67, yPos - 4
-newObj("HDDControls", i, ecs.drawButton(xPos, yPos, 14, 3, "Управление", ecs.colors.blue, 0xffffff))
+xPos, yPos = x + 53, yPos - 3
+newObj("HDDControls", i, ecs.drawButton(xPos, yPos, 12, 3, "Управление", ecs.colors.blue, 0xffffff))
 
 yPos = yPos + 5
 end
