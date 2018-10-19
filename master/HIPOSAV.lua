@@ -47,12 +47,12 @@ yScr = 30
 end
 xCen, yCen = math.ceil(xScr/2), math.ceil(yScr/2)
 
-desk1 = {}
-desk2 = {}
-desk3 = {}
---desk1 = {"iconNC.pic","iconNANO.pic","nano2.pic","iconEXIT.pic","battleship.pic","saper.pic","copyfile.pic","chat.pic","ops.pic","pstb.pic","tq.pic"}
---desk2 = {"/HIPOSAV/nc.lua","/HIPOSAV/nanobots.lua","/HIPOSAV/nanoplus.lua","/HIPOSAV/exit.lua","/HIPOSAV/Battleship.lua","/HIPOSAV/saper.lua","/HIPOSAV/copydisk.lua","/HIPOSAV/chat.lua","/HIPOSAV/ops.lua","/HIPOSAV/pstb.lua","/HIPOSAV/tquest.lua"}
---desk3 = {"  Менеджер","Упр.нанитами","Наноботы-2","Выключение ПК","Морской бой","   Сапёр","Копир-е HDD","   Чат","Диспетчер HDD"," Pastebin","   TQueST"}
+--desk1 = {}
+--desk2 = {}
+--desk3 = {}
+desk1 = {"iconNC.pic","iconNANO.pic","nano2.pic","iconEXIT.pic","battleship.pic","saper.pic","info.pic","chat.pic","ops.pic","pstb.pic","tq.pic"}
+desk2 = {"/HIPOSAV/nc.lua","/HIPOSAV/nanobots.lua","/HIPOSAV/nanoplus.lua","/HIPOSAV/exit.lua","/HIPOSAV/Battleship.lua","/HIPOSAV/saper.lua","/HIPOSAV/info.lua","/HIPOSAV/chat.lua","/HIPOSAV/ops.lua","/HIPOSAV/pstb.lua","/HIPOSAV/tquest.lua"}
+desk3 = {"  Менеджер","Упр.нанитами","Наноботы-2","Выключение ПК","Морской бой","   Сапёр","Копир-е HDD","   Чат","Диспетчер HDD"," Pastebin","   TQueST"}
 desk4 = {}
 desk5 = {}
 exityn = 1
