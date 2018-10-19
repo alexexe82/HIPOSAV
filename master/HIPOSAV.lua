@@ -205,25 +205,26 @@ print ("option")
 tr1 = 1
 gpu.setForeground(0xFFFFFF)
 gpu.setBackground(0x334980)
-while tr1 < xScr-11 do
-term.setCursor(tr1,yScr-1)
-print (" ")
-tr1 = tr1 + 1
-end
-gpu.setBackground(0x009240)
-term.setCursor(1, yScr-1)
-print ("Выход в консоль")
+--  -----  устаревшие элементы управления
+--while tr1 < xScr-11 do
+--term.setCursor(tr1,yScr-1)
+--print (" ")
+--tr1 = tr1 + 1
+--end
+-- gpu.setBackground(0x009240)
+-- term.setCursor(1, yScr-1)
+-- print ("Выход в консоль")
 -- image.draw(xCen-10,2,oslogoup)
 -- кнопка в углу
-  gpu.setForeground(0x000000)
-  gpu.setBackground(0x66DB00)
-term.setCursor(1,1)
+-- gpu.setForeground(0x000000)
+-- gpu.setBackground(0x66DB00)
+-- term.setCursor(1,1)
 -- print ("ОПЦИИ")
--- цикл отрисовки иконок и подписей к ним
+-- ---------------------------        цикл отрисовки иконок и подписей к ним
 i=1
 mn = 1
   while i < #desk1+1 do
--- перенос каждого следующего столбца на 15 символов вправо
+-- -----     перенос каждого следующего столбца на 15 символов вправо
 if i == 1 then xtmp = 5 end
 if i == 4 then xtmp,mn = 20,1 end
 if i == 7 then xtmp,mn = 35,1 end
@@ -257,6 +258,11 @@ local event, _, xmou2, ymou2 = event.pull(15)
      maxX, maxY = 100, 30
     elseif ymou2 == 4 and xmou2 < 40 then
      maxX, maxY = xScrM, yScrM
+	elseif ymou2 == 8 and xmou2 < 40 then
+     gpu.setBackground(0x000000)
+     gpu.setForeground(0xFFFFFF)
+     term.clear()
+     exityn = 2
     elseif ymou2 == 9 and xmou2 < 40 then
 
     local mainContainer2 = GUI.container(1, 1, 50, 23)
@@ -270,6 +276,8 @@ buffer.draw(true)
 end
 vers = {
 "Версия 2.0 (Андроид) ",
+"- Поддержка предыдущих версий прекращена ",
+"- Изменены элементы интерфейса",
 "- Заменен загрузчик и инсталлятор",
 "- Заменены логотипы",
 "- Переделан основной исполняемый файл",
@@ -304,7 +312,7 @@ vers = {
 " ",
 " ",
 " "}
-table.insert(textBox.lines, {text = "Журнал версий...", color = 0x880000})
+table.insert(textBox.lines, {text = "Журнал версий...(работает прокрутка мышью)", color = 0x880000})
  v = 1
  while v < #vers+1 do 
  table.insert(textBox.lines, vers[v])
@@ -345,12 +353,6 @@ while exityn ~= 2 do
   local event, _, xmou, ymou = event.pull(15)
 
   if event == "touch" then 
-    if ymou == yScr-1 and xmou < 15 then 
-     gpu.setBackground(0x000000)
-     gpu.setForeground(0xFFFFFF)
-     term.clear()
-     exityn = 2
-    end
 
 -- контекстное меню для настроек оболочки
 
@@ -372,7 +374,7 @@ print ("║                                         ║")
 print ("║                                         ║")
 print ("║                                         ║")
 print ("║                                         ║")
-print ("║                     v.1.2               ║")
+print ("║                                         ║")
 print ("╚═════════════════════════════════════════╝")
 optionsm()
   end
