@@ -191,5 +191,5 @@ end
 
 
 gpu.setForeground(0x66B6FF)
-shell.execute(reboot)
+shell.execute(true)
 --io.read()
