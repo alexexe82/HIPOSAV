@@ -258,6 +258,12 @@ local event, _, xmou2, ymou2 = event.pull(15)
      maxX, maxY = 100, 30
     elseif ymou2 == 4 and xmou2 < 40 then
      maxX, maxY = xScrM, yScrM
+	elseif ymou2 == 6 and xmou2 < 40 then
+	 shell.execute("cd //")
+     shell.execute("HIPOSAV/ops.lua")
+	elseif ymou2 == 8 and xmou2 < 40 then
+	 shell.execute("cd //")
+     shell.execute("HIPOSAV/exit.lua")
 	elseif ymou2 == 10 and xmou2 < 40 then
      gpu.setBackground(0x000000)
      gpu.setForeground(0xFFFFFF)
