@@ -22,6 +22,7 @@
 
 local event = require("event")
 local component = require("component")
+local computer = require("computer")
 local gpu = component.gpu
 local term = require("term")
 local shell = require("shell")
@@ -32,7 +33,7 @@ local GUI = require("GUI")
 
 -- переменные, таблицы с параметрами иконок и их ссылками на программы
 
-local oslogoup = image.load("HIPOSAV/IconsPic/oslogoup.pic")
+--local oslogoup = image.load("HIPOSAV/IconsPic/oslogoup.pic")
 --local imageLogo = image.load("HIPOSAV/IconsPic/Logo.pic")
 xScrM, yScrM = gpu.getResolution()
 xScr, yScr = gpu.getResolution()
@@ -62,6 +63,7 @@ qt = 1
 
 foreg = {0x000000,0x0F0F0F,0x1E1E1E,0x2D2D2D,0x3C3C3C,0x4B4B4B,0x5A5A5A,0x696969,0x787878,0x878787,0x969696,0xA5A5A5,0xB4B4B4,0xC3C3C3,0xD2D2D2,0xE1E1E1,0xF0F0F0,0xFFFFFF}
 local i = xCen-25
+os.sleep(0.1)
 term.clear()
 os.sleep(0.1)
 -- image.draw(xCen-25,yCen-5,imageLogo)
@@ -101,7 +103,7 @@ while i < xCen+25 do
   if j > 18 then j = 18 end
   gpu.setForeground(foreg[j])
   gpu.setBackground(0x000000)
-  term.setCursor(xCen-10, yCen+12)
+  term.setCursor(xCen-10, yCen+11)
   print ("Заходи на guild-bt.ru")
   i=i+1
   os.sleep(0.0005)
@@ -125,10 +127,83 @@ gpu.setResolution(xScrM, yScrM)
 end
 gpu.setResolution(maxX,maxY)
 xScr, yScr = gpu.getResolution()
-xCen, yCen = xScr/2, yScr/2
+xCen, yCen = math.ceil(xScr/2), math.ceil(yScr/2)
 gpu.setBackground(0x3392BF)
 term.clear()
+ln = ""
+for line = 1,xScr do
+ln = ln.." "
+end
+gpu.setBackground(0x002440)
+term.setCursor(1,1)
+print (ln)
+gpu.setBackground(0x004980)
+term.setCursor(1,2)
+print (ln)
+gpu.setBackground(0x006DBF)
+term.setCursor(1,3)
+print (ln)
+--   ------------------------------- logo ANDRO  -------------
+gpu.setBackground(0x002440)
+gpu.setForeground(0x00B600)
+term.setCursor(2,1)
+print (" ▀▄ ▄███▄ ▄▀  ")
+gpu.setBackground(0x004980)
+term.setCursor(2,2)
+print (" ▄██▀███▀██▄  ")
+gpu.setBackground(0x006DBF)
+term.setCursor(2,3)
+print ("▄███████████▄ ")
+gpu.setBackground(0x00B600)
+gpu.setForeground(0x002440)
+term.setCursor(5,3)
+print ("HIPOSAV")
+--  ----------------------------------  battery ------------------
+-- batt = 100
+pwtotal = computer.maxEnergy()
+pwuse = computer.energy()
+batt = math.ceil((100/pwtotal)*pwuse)
+gpu.setBackground(0x002440)
+gpu.setForeground(0x00B600)
+term.setCursor(xScr-8,1)
+print ("▄▄▄▄▄▄ ")
+gpu.setBackground(0x004980)
+term.setCursor(xScr-8,2)
+print ("█    ██")
+term.setCursor(xScr-7,2)
+print (batt.."%")
+gpu.setBackground(0x006DBF)
+term.setCursor(xScr-8,3)
+print ("▀▀▀▀▀▀ ")
+-- -----------------  отрисовка текущего Московского времени в трее  ------
+gpu.setBackground(0x002440)
+gpu.setForeground(0x00B600)
+term.setCursor(xScr-19,1)
+print ("╒═══════╕")
+gpu.setBackground(0x006DBF)
+term.setCursor(xScr-19,3)
+print ("╘╤╦═══╤╦╛")
+gpu.setForeground(0xFFFFFF)
+gpu.setBackground(0x004980)
+tday, tmon, tyear,rltimeh,rltimem,rltimes = ecs.getHostTime(0)
+term.setCursor(xScr-19,2)
+print ("МСК "..rltimeh..":"..rltimem)
+--         ------------------------------------- иконка настроек -----------
+gpu.setBackground(0x002440)
+gpu.setForeground(0x00B600)
+term.setCursor(xScr-27,1)
+print ("║║║║║║")
+gpu.setBackground(0x006DBF)
+term.setCursor(xScr-27,3)
+print ("║║║║║║")
+term.setCursor(xScr-27,2)
+gpu.setForeground(0x002440)
+gpu.setBackground(0x00B600)
+print ("option")
+--                         ---------------------------        ---
+
 tr1 = 1
+gpu.setForeground(0xFFFFFF)
 gpu.setBackground(0x334980)
 while tr1 < xScr-11 do
 term.setCursor(tr1,yScr-1)
@@ -138,12 +213,12 @@ end
 gpu.setBackground(0x009240)
 term.setCursor(1, yScr-1)
 print ("Выход в консоль")
-image.draw(xCen-10,2,oslogoup)
+-- image.draw(xCen-10,2,oslogoup)
 -- кнопка в углу
   gpu.setForeground(0x000000)
   gpu.setBackground(0x66DB00)
 term.setCursor(1,1)
-print ("ОПЦИИ")
+-- print ("ОПЦИИ")
 -- цикл отрисовки иконок и подписей к ним
 i=1
 mn = 1
@@ -167,10 +242,7 @@ print(desk3[i])
   mn = mn + 1
   i=i+1
   end
--- отрисовка текущего Московского времени в трее
-tday, tmon, tyear,rltimeh,rltimem,rltimes = ecs.getHostTime(0)
-term.setCursor(xScr-10,yScr-1)
-print ("МСК "..rltimeh..":"..rltimem)
+  
 --gpu.setBackground(0x5A5A5A)
 end
 
@@ -179,39 +251,53 @@ function optionsm()
 os.sleep(1)
 local event, _, xmou2, ymou2 = event.pull(15)
    if event == "touch" then
-    if ymou2 == 2 and xmou2 < 20 then
+    if ymou2 == 2 and xmou2 < 40 then
      maxX, maxY = 70, 24
-    end
-    if ymou2 == 3 and xmou2 < 20 then
+    elseif ymou2 == 3 and xmou2 < 40 then
      maxX, maxY = 100, 30
-    end
-    if ymou2 == 4 and xmou2 < 20 then
+    elseif ymou2 == 4 and xmou2 < 40 then
      maxX, maxY = xScrM, yScrM
-    end
-    if ymou2 == 9  and xmou2 > 10 and xmou2 < 20 then
+    elseif ymou2 == 9 and xmou2 < 40 then
 
-    local mainContainer2 = GUI.container(2,2,60,40)
-mainContainer2:addChild(GUI.panel(2, 2, 51, 26, 0x2D2D2D))
+    local mainContainer2 = GUI.container(1, 1, 50, 23)
+mainContainer2:addChild(GUI.panel(1, 2, 45, 22, 0x2D2D2D))
 
-local textBox = mainContainer2:addChild(GUI.textBox(1, 1, 50, 25, 0xEEEEEE, 0x2D2D2D, {}, 1, 1, 0))
-mainContainer2:addChild(GUI.button(5, 22, 40, 3, 0x336DBF, 0xEEEEEE, 0xEEEEEE, 0x336DBF, "Exit")).onTouch = function()
+local textBox = mainContainer2:addChild(GUI.textBox(2, 2, xCen + 25, 22, 0xEEEEEE, 0x2D2D2D, {}, 1, 1, 0))
+mainContainer2:addChild(GUI.button(40, 3, 8, 3, 0x336DBF, 0xEEEEEE, 0xEEEEEE, 0x336DBF, "Exit")).onTouch = function()
 mainContainer2:stopEventHandling()
 buffer.clear(0x0)
 buffer.draw(true)
 end
 vers = {
-" ",
+"Версия 2.0 (Андроид) ",
+"- Заменен загрузчик и инсталлятор",
+"- Заменены логотипы",
+"- Переделан основной исполняемый файл",
+"- Убраны устаревшие программы",
+"- Добавлены функции в настройках",
+"- Загрузка перенесена с Pastebin на GitHub",
+"- Добавлено отображение заряда батареи",
 "Версия 1.2",
 "- Добавлена возможность смены разрешения экрана",
 "- Исправлен выход в играх Сапер и Морской бой",
 "- Переделана стартовая загрузка и установка ОС",
 "- Добавлены графические библиотеки из MineOS",
-"- Добавлена программа управления дисками и флоппи",
+"- Добавлена программа управления HDD и флоппи",
 "- Добавлена программа авторизации на Pastebin ",
 "Версия 1.1",
 "- Исправлен баг с возвращением из программ",
 "- Исправлена цветовая палитра при выходе с ОС",
 "- Добавлена программа - межсерверный чат",
+" ",
+" ",
+" ",
+" ",
+" ",
+" ",
+" ",
+" ",
+" ",
+" ",
 " ",
 " ",
 " ",
@@ -268,19 +354,26 @@ while exityn ~= 2 do
 
 -- контекстное меню для настроек оболочки
 
-   if ymou < 3 and xmou < 5 then
- gpu.setBackground(0x000000)
- gpu.setForeground(0xFFFFFF)
+   if ymou < 4 then
+ gpu.setBackground(0x1E1E1E)
+ gpu.setForeground(0xCCDBBF)
 term.setCursor(1,1)
-print ("+------------------+")
-print ("|Разрешение 70x24  |")
-print ("|Разрешение 100x30 |")
-print ("|Разрешение maximum|")
-print ("+------------------+")
-print ("|                  |")
-print ("|                  |")
-print ("|                  |")
-print ("+------------v.1.2-+")
+print ("╔═════════════════════════════════════════╗")
+print ("║Разрешение 70x24  (видеокарта 2 уровня)  ║")
+print ("║Разрешение 100x30 (видеокарта 3 уровня)  ║")
+print ("║Разрешение maximum(максимально возможное)║")
+print ("╠═════════════════════════════════════════╣")
+print ("║Управление дисками (форматирование)      ║")
+print ("║Выключение (перезагрузка)                ║")
+print ("║Выход в консоль                          ║")
+print ("║Информация о HIPOS(android ver.2.0)      ║")
+print ("║                                         ║")
+print ("║                                         ║")
+print ("║                                         ║")
+print ("║                                         ║")
+print ("║                                         ║")
+print ("║                     v.1.2               ║")
+print ("╚═════════════════════════════════════════╝")
 optionsm()
   end
       i=1
@@ -300,4 +393,4 @@ end
 gpu.setBackground(0x000000)
 gpu.setForeground(0xFFFFFF)
 term.clear()
-print ("(Чтобы запустить ОС в командной строке набери HIPOS.lua)")
+print ("(Чтобы запустить ОС в командной строке набери HIPOSAV.lua)")

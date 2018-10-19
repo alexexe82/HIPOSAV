@@ -1,0 +1,1 @@
+local success, reason = pcall(loadfile("HIPOSAV.lua")); if not success then print("Ошибка: " .. tostring(reason)) end
