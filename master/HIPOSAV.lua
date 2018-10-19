@@ -260,10 +260,10 @@ local event, _, xmou2, ymou2 = event.pull(15)
      maxX, maxY = xScrM, yScrM
 	elseif ymou2 == 6 and xmou2 < 40 then
 	 shell.execute("cd //")
-     shell.execute("HIPOSAV/ops.lua")
+     shell.execute("/HIPOSAV/ops.lua")
 	elseif ymou2 == 8 and xmou2 < 40 then
 	 shell.execute("cd //")
-     shell.execute("HIPOSAV/exit.lua")
+     shell.execute("/HIPOSAV/exit.lua")
 	elseif ymou2 == 10 and xmou2 < 40 then
      gpu.setBackground(0x000000)
      gpu.setForeground(0xFFFFFF)
@@ -331,7 +331,7 @@ buffer.draw(true)
 mainContainer2:startEventHandling()
     elseif ymou2 == 14 and xmou2 < 40 then
 	 shell.execute("cd //")
-     shell.execute("HIPOSAV/info.lua")
+     shell.execute("/HIPOSAV/info.lua")
 	end
    end
 end
