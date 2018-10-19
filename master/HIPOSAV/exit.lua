@@ -15,7 +15,7 @@ local gpu = component.gpu
 
 
 xcen, ycen = gpu.getResolution()
-xcen, ycen = xcen/2, ycen/2
+xcen, ycen = math.ceil(xcen/2), math.ceil(ycen/2)
 
 function cp(xp,yp)
 term.setCursor(xp,yp)
@@ -42,7 +42,7 @@ gpu.setBackground(0x33B640)
 cp(xp,12)
 print ("              ")
 cp(xp,13)
-print ("    НАЗАД     ")
+print ("  В КОНСОЛЬ   ")
 cp(xp,14)
 print ("              ")
 gpu.setBackground(0x339200)
@@ -65,6 +65,7 @@ local event, _, xmo, ymo = event.pull(5)
           computer.shutdown()
           end
           if ymo > 11 and ymo < 15 then
+		  exityn = 2
 ecs.prepareToExit()          
 os.exit()
 
