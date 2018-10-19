@@ -63,9 +63,9 @@ qt = 1
 
 foreg = {0x000000,0x0F0F0F,0x1E1E1E,0x2D2D2D,0x3C3C3C,0x4B4B4B,0x5A5A5A,0x696969,0x787878,0x878787,0x969696,0xA5A5A5,0xB4B4B4,0xC3C3C3,0xD2D2D2,0xE1E1E1,0xF0F0F0,0xFFFFFF}
 local i = xCen-25
-os.sleep(0.1)
+os.sleep(0.3)
 term.clear()
-os.sleep(0.1)
+os.sleep(0.3)
 -- image.draw(xCen-25,yCen-5,imageLogo)
 logoandroid = {
 "           ▄                     ▄       ",
@@ -258,12 +258,12 @@ local event, _, xmou2, ymou2 = event.pull(15)
      maxX, maxY = 100, 30
     elseif ymou2 == 4 and xmou2 < 40 then
      maxX, maxY = xScrM, yScrM
-	elseif ymou2 == 8 and xmou2 < 40 then
+	elseif ymou2 == 10 and xmou2 < 40 then
      gpu.setBackground(0x000000)
      gpu.setForeground(0xFFFFFF)
      term.clear()
      exityn = 2
-    elseif ymou2 == 9 and xmou2 < 40 then
+    elseif ymou2 == 12 and xmou2 < 40 then
 
     local mainContainer2 = GUI.container(1, 1, 50, 23)
 mainContainer2:addChild(GUI.panel(1, 2, 45, 22, 0x2D2D2D))
@@ -275,6 +275,8 @@ buffer.clear(0x0)
 buffer.draw(true)
 end
 vers = {
+" ",
+" ",
 "Версия 2.0 (Андроид) ",
 "- Поддержка предыдущих версий прекращена ",
 "- Изменены элементы интерфейса",
@@ -321,7 +323,10 @@ table.insert(textBox.lines, {text = "Журнал версий...(работае
 mainContainer2:draw()
 buffer.draw(true)
 mainContainer2:startEventHandling()
-    end
+    elseif ymou2 == 14 and xmou2 < 40 then
+	 shell.execute("cd //")
+     shell.execute("HIPOSAV/info.lua")
+	end
    end
 end
 
@@ -366,12 +371,15 @@ print ("║Разрешение 100x30 (видеокарта 3 уровня)  �
 print ("║Разрешение maximum(максимально возможное)║")
 print ("╠═════════════════════════════════════════╣")
 print ("║Управление дисками (форматирование)      ║")
+print ("╠═════════════════════════════════════════╣")
 print ("║Выключение (перезагрузка)                ║")
+print ("╠═════════════════════════════════════════╣")
 print ("║Выход в консоль                          ║")
+print ("╠═════════════════════════════════════════╣")
 print ("║Информация о HIPOS(android ver.2.0)      ║")
-print ("║                                         ║")
-print ("║                                         ║")
-print ("║                                         ║")
+print ("╠═════════════════════════════════════════╣")
+print ("║Перечень компонентов системы с адресами  ║")
+print ("╠═════════════════════════════════════════╣")
 print ("║                                         ║")
 print ("║                                         ║")
 print ("║                                         ║")
