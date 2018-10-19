@@ -24,10 +24,10 @@ local topButtons = {"О системе", "Диски"}
 local spaceBetweenTopButtons, offsetTopButtons = 2, 2
 local currentMode = 1
 
-local osIcon = image.load("/HIPOS/IconsPic/oslogoup.pic")
-local hddIcon = image.load("/HIPOS/IconsPic/HDD.pic")
-local floppyIcon = image.load("/HIPOS/IconsPic/Floppy.pic")
-local updateIcon = image.load("/HIPOS/IconsPic/Update.pic")
+local osIcon = image.load("/HIPOSAV/IconsPic/oslogoup.pic")
+local hddIcon = image.load("/HIPOSAV/IconsPic/HDD.pic")
+local floppyIcon = image.load("/HIPOSAV/IconsPic/Floppy.pic")
+local updateIcon = image.load("/HIPOSAV/IconsPic/Update.pic")
 
 local x, y = "auto", "auto"
 local width, height = 68, 22
@@ -133,10 +133,10 @@ xPos, yPos = x + 1, yPos + 5
 ecs.colorTextWithBack(xPos, yPos, 0x000000, colors.main, "HIPOS (Android Version)"); yPos = yPos + 1
 ecs.colorText(xPos, yPos, ecs.colors.lightGray, "Версия 2.0"); yPos = yPos + 2
 
-ecs.smartText(xPos, yPos, "§fСистемный блок §8(3 уровень)"); yPos = yPos + 1
-ecs.smartText(xPos, yPos, "§fПроцессор §8(3 уровень, почти Пентиум)"); yPos = yPos + 1
+ecs.smartText(xPos, yPos, "§fСистемный блок §8(Офисный)"); yPos = yPos + 1
+ecs.smartText(xPos, yPos, "§fПроцессор §8(Для серьезных задач)"); yPos = yPos + 1
 ecs.smartText(xPos, yPos, "§fПамять §8(DDR5 с охлаждением "..ram.total.." KB)"); yPos = yPos + 1
-ecs.smartText(xPos, yPos, "§fГрафика §8(GTX ГеФорс 1048i)"); yPos = yPos + 1
+ecs.smartText(xPos, yPos, "§fГрафика §8(Не для игр)"); yPos = yPos + 1
 ecs.smartText(xPos, yPos, "§fСерийный номер §8"..ecs.stringLimit("end", computer.address(), 30)); yPos = yPos + 1
 	
 elseif currentMode == 2 then
