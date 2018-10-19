@@ -730,6 +730,8 @@ while true do
 						{"CenterText", 0xFFFFFF, "Автор:"},
 						{"CenterText", 0xBBBBBB, "Тимофеев Игорь"},
 						{"CenterText", 0xBBBBBB, "vk.com/id7799889"},
+						{"CenterText", 0xFFFFFF, "Адаптировал под КПК:"},
+						{"CenterText", 0xBBBBBB, "MineCR"},
 						{"EmptyLine"},
 						{"CenterText", 0xFFFFFF, "Тестеры:"},
 						{"CenterText", 0xBBBBBB, "Егор Палиев"},
