@@ -36,8 +36,8 @@ logo = image.fromString(logo)
 
 local pictures = {
 
-{ "buttonbig", "Рычаг вкл|выкл (выдает сигнал редстоуна)"},
-{ "danger", "Знак опасности (Черный череп на желтом фоне)"},
+{"buttonbig", "Рычаг вкл|выкл (выдает сигнал редстоуна)"},
+{"danger", "Знак опасности (Черный череп на желтом фоне)"},
 {"oknosmall", "Окно маленькое (Можно закрывать жалюзи)"},
 {"pushka", "Пушка старинная 17 век (Декор)"},
 {"stolbeliy", "Белый стол с одной центральной ножкой (Как в столовой)"},
@@ -53,13 +53,13 @@ local pictures = {
 {"kotelok", "Котелок выживальщика над догорающим костром"},
 }
 
-local xwd = 135
+local mainContainerXY = GUI.fullScreenContainer()
+local xwd = mainContainerXY.width
 local linewd = "_"
 
 for i = 1,xwd - 60 do
  linewd = linewd.."_"
 end 
-
 
 local mainContainer, window = MineOSInterface.addWindow(GUI.titledWindow(1, 1, xwd, 46, "Katalog3d "..Version, true))
 --local mainContainer, window = MineOSInterface.addWindow(GUI.filledWindow(1, 1, 135, 35))
@@ -80,11 +80,15 @@ window:addChild(GUI.text(12,34, 0x004980, string.limit("для печати на
 window:addChild(GUI.text(16, 36, 0x004980, string.limit("в формате 3dm",40)))
 window:addChild(GUI.text(16,39, 0x004980, string.limit("Автор: MineCR",40)))
 window:addChild(GUI.text(8, 41, 0x004980, string.limit("создано на проекте guild-bt.ru",40)))
+window:addChild(GUI.text(13,5, 0x004980, string.limit("Для удобства работы",40)))
+window:addChild(GUI.text(16,6, 0x004980, string.limit("с приложением",40)))
+window:addChild(GUI.text(12, 7, 0x004980, string.limit("используйте разрешение",40)))
+window:addChild(GUI.text(15, 8, 0x004980, string.limit("не менее 150х50",40)))
 -- window:addChild(GUI.text(2, 32, 0x004980, string.limit("",40)))
 local x, y, width, horizontalSpace, verticalSpace = 45, 3, 10, 2, 0
 for i = 1, #pictures do
   window:addChild(GUI.text(x, y, 0xB62B00, string.limit(pictures[i][1],width)))
-  window:addChild(GUI.text(x+15, y, 0x696969, string.limit(pictures[i][2],xwd- width-5)))
+  window:addChild(GUI.text(x+15, y, 0x696969, string.limit(pictures[i][2],xwd- x-29)))
   window:addChild(GUI.text(x, y + 1, 0xB62B00, string.limit(linewd,xwd- width-5)))
   window:addChild(GUI.framedButton(xwd - 11, y-1,
    width, 3, 0x696969, 0x00B600, 0x880000, 0x880000, "Download")).onTouch = function()
@@ -105,6 +109,12 @@ for i = 1, #pictures do
 
  -- end
 end
+
+--local scrollBar = window:addChild(GUI.scrollBar(window.width - 3, 1, 4, window.height, 0x00B600, 0x880000, 1, 100, 1, window.height, 1))
+--	scrollBar.onTouch = function()
+--		linesY = -math.floor(scrollBar.value) + 3
+--		mainContainer:drawOnScreen()
+--	end
 
 mainContainer:drawOnScreen()
 -- gpu.setResolution(XoldScr, YoldScr)
