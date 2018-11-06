@@ -123,6 +123,7 @@ end
 -- print("Downloading HIPOS file list...")
 local path = "/HIPOSAV/System/Files.cfg"
 local URLs = {
+EFI = "https://raw.githubusercontent.com/IgorTimofeev/MineOS/master/EFI/Minified.lua",
 applicationList = "https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/master/files.cfg",
 	}
 wget(URLs.applicationList, path)
@@ -181,6 +182,9 @@ print ("ИНФОРМАЦИЯ")
 	end
 
 gpu.setForeground(0xFFB680)
+
+local web = require("web")
+component.eeprom.set(web.request(URLs.EFI))
 
 for i = 1,5 do
 	sec = 6 - i
