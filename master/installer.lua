@@ -123,7 +123,7 @@ end
 -- print("Downloading HIPOS file list...")
 local path = "/HIPOSAV/System/Files.cfg"
 local URLs = {
-EFI = "https://raw.githubusercontent.com/IgorTimofeev/MineOS/master/EFI/Minified.lua",
+EFI = "https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/master/bios.lua",
 applicationList = "https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/master/files.cfg",
 	}
 wget(URLs.applicationList, path)
