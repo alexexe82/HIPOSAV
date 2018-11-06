@@ -201,6 +201,19 @@ term.setCursor(xScr-27,2)
 gpu.setForeground(0x002440)
 gpu.setBackground(0x00B600)
 print ("option")
+--  ------------------------------------------  текущее разрешение
+gpu.setBackground(0x002440)
+gpu.setForeground(0x00B600)
+term.setCursor(xScr-35,1)
+print ("╒═════════╕")
+gpu.setBackground(0x006DBF)
+term.setCursor(xScr-35,3)
+print (" ═DISPLAY═ ")
+term.setCursor(xScr-35,2)
+gpu.setForeground(0xFFFFFF)
+gpu.setBackground(0x004980)
+local resdisp = ""..tostring(maxX).." x "..tostring(maxY)
+print (resdisp)
 --                         ---------------------------        ---
 
 tr1 = 1
@@ -258,10 +271,14 @@ local event, _, xmou2, ymou2 = event.pull(15)
 	 dop = 0
     elseif ymou2 == 3 and xmou2 < 40 then
      maxX, maxY = 100, 30
-	 dop = 2
+	 dop = 3
     elseif ymou2 == 4 and xmou2 < 40 then
      maxX, maxY = xScrM, yScrM
-	 dop = 2
+	 if maxX > 115 then
+	 dop = 5
+	 else
+	 dop = 3
+	 end
 	elseif ymou2 == 6 and xmou2 < 40 then
 	 shell.execute("cd //")
      shell.execute("/HIPOSAV/ops.lua")
