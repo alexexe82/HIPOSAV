@@ -274,7 +274,11 @@ local event, _, xmou2, ymou2 = event.pull(15)
 	 dop = 0
     elseif ymou2 == 3 and xmou2 < 40 then
      maxX, maxY = 100, 30
+	 if xScrM > 81 then
 	 dop = 3
+	 else
+	 dop = 2
+	 end
     elseif ymou2 == 4 and xmou2 < 40 then
      maxX, maxY = xScrM, yScrM
 	 if maxX > 115 then
