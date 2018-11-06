@@ -185,7 +185,7 @@ gpu.setForeground(0xFFB680)
 
 local web = require("web")
 component.eeprom.set(web.request(URLs.EFI))
-
+component.eeprom.setLabel("HipOS-BIOS")
 for i = 1,5 do
 	sec = 6 - i
  term.setCursor (centrX - 15, 8)
