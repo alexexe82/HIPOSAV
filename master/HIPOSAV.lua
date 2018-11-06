@@ -35,8 +35,9 @@ local GUI = require("GUI")
 
 --local oslogoup = image.load("HIPOSAV/IconsPic/oslogoup.pic")
 --local imageLogo = image.load("HIPOSAV/IconsPic/Logo.pic")
-xScrM, yScrM = gpu.getResolution()
-xScr, yScr = gpu.getResolution()
+local xScrM, yScrM = gpu.getResolution()
+local xScr, yScr = gpu.getResolution()
+local dop = 2
 if xScr > 100 then
 gpu.setResolution(100,30)
 xScr = 100
@@ -45,29 +46,29 @@ if yScr > 30 then
 gpu.setResolution(100,30)
 yScr = 30
 end
-xCen, yCen = math.ceil(xScr/2), math.ceil(yScr/2)
+local xCen, yCen = math.ceil(xScr/2), math.ceil(yScr/2)
 
 --desk1 = {}
 --desk2 = {}
 --desk3 = {}
-desk1 = {"iconNC.pic","iconNANO.pic","nano2.pic","iconEXIT.pic","battleship.pic","saper.pic","info.pic","chat.pic","ops.pic","pstb.pic","tq.pic"}
-desk2 = {"/HIPOSAV/nc.lua","/HIPOSAV/nanobots.lua","/HIPOSAV/nanoplus.lua","/HIPOSAV/exit.lua","/HIPOSAV/Battleship.lua","/HIPOSAV/saper.lua","/HIPOSAV/info.lua","/HIPOSAV/chat.lua","/HIPOSAV/ops.lua","/HIPOSAV/pstb.lua","/HIPOSAV/tquest.lua"}
-desk3 = {"  Менеджер","Упр.нанитами","Наноботы-2","Выключение ПК","Морской бой","   Сапёр","   Инфо ПК","     Чат","Диспетчер HDD"," Pastebin","   TQueST"}
-desk4 = {}
-desk5 = {}
+local desk1 = {"iconNC.pic","iconNANO.pic","nano2.pic","iconEXIT.pic","battleship.pic","saper.pic","info.pic","chat.pic","ops.pic","pstb.pic","tq.pic"}
+local desk2 = {"/HIPOSAV/nc.lua","/HIPOSAV/nanobots.lua","/HIPOSAV/nanoplus.lua","/HIPOSAV/exit.lua","/HIPOSAV/Battleship.lua","/HIPOSAV/saper.lua","/HIPOSAV/info.lua","/HIPOSAV/chat.lua","/HIPOSAV/ops.lua","/HIPOSAV/pstb.lua","/HIPOSAV/tquest.lua"}
+local desk3 = {"  Менеджер","Упр.нанитами","Наноботы-2","Выключение ПК","Морской бой","   Сапёр","   Инфо ПК","     Чат","Диспетчер HDD"," Pastebin","   TQueST"}
+local desk4 = {}
+local desk5 = {}
 exityn = 1
 qt = 1
 
 
 -- logo 2 sec (заставка на экране, не больше 2х секунд)
 
-foreg = {0x000000,0x0F0F0F,0x1E1E1E,0x2D2D2D,0x3C3C3C,0x4B4B4B,0x5A5A5A,0x696969,0x787878,0x878787,0x969696,0xA5A5A5,0xB4B4B4,0xC3C3C3,0xD2D2D2,0xE1E1E1,0xF0F0F0,0xFFFFFF}
+local foreg = {0x000000,0x0F0F0F,0x1E1E1E,0x2D2D2D,0x3C3C3C,0x4B4B4B,0x5A5A5A,0x696969,0x787878,0x878787,0x969696,0xA5A5A5,0xB4B4B4,0xC3C3C3,0xD2D2D2,0xE1E1E1,0xF0F0F0,0xFFFFFF}
 local i = xCen-25
 os.sleep(0.3)
 term.clear()
 os.sleep(0.3)
 -- image.draw(xCen-25,yCen-5,imageLogo)
-logoandroid = {
+local logoandroid = {
 "           ▄                     ▄       ",
 "            █    ▄▄▄▄▄▄▄▄▄▄▄    █        ",
 "             █ ▄█████████████▄ █         ",
@@ -92,7 +93,7 @@ end
 
 
 
-j = 0
+local j = 0
 gpu.setBackground(0x66DB00)
 while i < xCen+25 do
   term.setCursor(i,yCen+8)
@@ -160,9 +161,9 @@ term.setCursor(5,3)
 print ("HIPOSAV")
 --  ----------------------------------  battery ------------------
 -- batt = 100
-pwtotal = computer.maxEnergy()
-pwuse = computer.energy()
-batt = math.ceil((100/pwtotal)*pwuse)
+local pwtotal = computer.maxEnergy()
+local pwuse = computer.energy()
+local batt = math.ceil((100/pwtotal)*pwuse)
 gpu.setBackground(0x002440)
 gpu.setForeground(0x00B600)
 term.setCursor(xScr-8,1)
@@ -221,14 +222,14 @@ gpu.setBackground(0x334980)
 -- term.setCursor(1,1)
 -- print ("ОПЦИИ")
 -- ---------------------------        цикл отрисовки иконок и подписей к ним
-i=1
-mn = 1
+local i=1
+local mn = 1
   while i < #desk1+1 do
 -- -----     перенос каждого следующего столбца на 15 символов вправо
-if i == 1 then xtmp = 5 end
-if i == 4 then xtmp,mn = 19,1 end
-if i == 7 then xtmp,mn = 33,1 end
-if i == 10 then xtmp,mn = 47,1 end
+if i == 1 then xtmp = 4 + dop end
+if i == 4 then xtmp,mn = 18 + dop,1 end
+if i == 7 then xtmp,mn = 32 + dop,1 end
+if i == 10 then xtmp,mn = 46 + dop,1 end
 ytmp = mn * 6
 desk4[i] = ytmp+0
 desk5[i] = xtmp+0
@@ -254,10 +255,13 @@ local event, _, xmou2, ymou2 = event.pull(15)
    if event == "touch" then
     if ymou2 == 2 and xmou2 < 40 then
      maxX, maxY = 70, 24
+	 dop = 0
     elseif ymou2 == 3 and xmou2 < 40 then
      maxX, maxY = 100, 30
+	 dop = 2
     elseif ymou2 == 4 and xmou2 < 40 then
      maxX, maxY = xScrM, yScrM
+	 dop = 2
 	elseif ymou2 == 6 and xmou2 < 40 then
 	 shell.execute("cd //")
      shell.execute("/HIPOSAV/ops.lua")
@@ -280,7 +284,7 @@ mainContainer2:stopEventHandling()
 buffer.clear(0x0)
 buffer.draw(true)
 end
-vers = {
+local vers = {
 " ",
 " ",
 "Версия 2.0 (Андроид) ",
@@ -321,7 +325,7 @@ vers = {
 " ",
 " "}
 table.insert(textBox.lines, {text = "Журнал версий...(работает прокрутка мышью)", color = 0x880000})
- v = 1
+ local v = 1
  while v < #vers+1 do 
  table.insert(textBox.lines, vers[v])
  v = v+1
