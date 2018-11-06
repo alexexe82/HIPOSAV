@@ -213,7 +213,7 @@ gpu.setForeground(0x66FFFF)
 gpu.setBackground(0x004980)
 term.setCursor(xScr-40,2)
 print ("│         │")
-term.setCursor(xScr-39,2)
+term.setCursor(xScr-38,2)
 local resdisp = ""..tostring(maxX).." x "..tostring(maxY)
 print (resdisp)
 --                         ---------------------------        ---
