@@ -227,9 +227,9 @@ local mn = 1
   while i < #desk1+1 do
 -- -----     перенос каждого следующего столбца на 15 символов вправо
 if i == 1 then xtmp = 4 + dop end
-if i == 4 then xtmp,mn = 18 + dop,1 end
-if i == 7 then xtmp,mn = 32 + dop,1 end
-if i == 10 then xtmp,mn = 46 + dop,1 end
+if i == 4 then xtmp,mn = 18 + dop + dop,1 end
+if i == 7 then xtmp,mn = 32 + dop + dop + dop,1 end
+if i == 10 then xtmp,mn = 46 + dop + dop + dop + dop,1 end
 ytmp = mn * 6
 desk4[i] = ytmp+0
 desk5[i] = xtmp+0
