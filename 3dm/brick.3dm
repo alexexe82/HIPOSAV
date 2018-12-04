@@ -1,0 +1,20 @@
+{
+  tooltip = "Для тайных ходов",
+  shapes = {
+    [1] = {
+      [1] = 0,
+      [2] = 0,
+      [3] = 0,
+      [4] = 16,
+      [5] = 16,
+      [6] = 16,
+      texture = "brick"
+    }
+  },
+  label = "Кирпичи",
+  collidable = {
+    [1] = false,
+    [2] = false
+  },
+  emitRedstone = false
+}
