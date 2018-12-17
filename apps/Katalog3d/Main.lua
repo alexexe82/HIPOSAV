@@ -88,7 +88,7 @@ window:addChild(GUI.text(13,5, 0x004980, string.limit("Для удобства �
 window:addChild(GUI.text(16,6, 0x004980, string.limit("с приложением",40)))
 window:addChild(GUI.text(12, 7, 0x004980, string.limit("используйте разрешение",40)))
 window:addChild(GUI.text(15, 8, 0x004980, string.limit("не менее 150х50",40)))
-window:addChild(GUI.text(50, yhg-7, 0x004980, string.limit("страница ",40)))
+window:addChild(GUI.text(46, yhg-7, 0x004980, string.limit("страница ",40)))
 
 local listok = {}
 local x, y, width, horizontalSpace, verticalSpace = 45, 3, 10, 2, 0
@@ -97,7 +97,7 @@ local lststr = math.ceil((yhg-5) / 4)
 local lstmax = math.ceil(#kat / lststr)
 local colred =  0xB62B00
 for lst = 1, lstmax do --lst
-window:addChild(GUI.framedButton(60+(6*lst), yhg - 8, 5, 3, 0x696969, 0x00B600, 0x880000, 0x880000, lst)).onTouch = function()
+window:addChild(GUI.framedButton(54+(6*lst), yhg - 8, 5, 3, 0x696969, 0x00B600, 0x880000, 0x880000, lst)).onTouch = function()
     for tmp = 1, lstmax do
     listok[tmp].hidden = true
     end
