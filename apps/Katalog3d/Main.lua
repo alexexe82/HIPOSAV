@@ -68,15 +68,15 @@ local kat = {
 }
  
 local mainContainerXY = GUI.fullScreenContainer()
-local xwd = mainContainerXY.width - 15
-local yhg = mainContainerXY.height - 30
+local xwd = mainContainerXY.width - 18
+local yhg = mainContainerXY.height
 local linewd = "_"
 local strZ = 1
 for i = 1,xwd - 60 do
  linewd = linewd.."_"
 end
  
-local mainContainer, window = MineOSInterface.addWindow(GUI.titledWindow(1, 1, xwd, 43, "Katalog3d "..Version, true))
+local mainContainer, window = MineOSInterface.addWindow(GUI.titledWindow(1, 1, xwd, 39, "Katalog3d "..Version, true))
  
 window:addChild(GUI.image(2, 10, logo))
 window:addChild(GUI.text(10, 32, 0x004980, string.limit("Сборник готовых 3д моделей",40)))
