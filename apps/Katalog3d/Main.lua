@@ -130,7 +130,7 @@ for i = 1+mnogitel, lmno do
       -- mainContainer:drawOnScreen()
         loadfile("/bin/wget.lua")("https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/3dm/" .. file, "/3dm/" .. file, "-FQ")
     end -- многоблочные модели энд
-    GUI.alert("Загрузка завершена! Файл находится по адресу /3dm/" .. file)
+    GUI.alert("Загрузка завершена! Файлы находятся по адресу /3dm/")
    end
   end
  
