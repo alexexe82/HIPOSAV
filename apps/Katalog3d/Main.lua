@@ -77,17 +77,16 @@ for i = 1,xwd - 60 do
 end
  
 local mainContainer, window = MineOSInterface.addWindow(GUI.titledWindow(1, 1, xwd, yhg - 5, "Katalog3d "..Version, true))
- 
-window:addChild(GUI.image(2, 10, logo))
-window:addChild(GUI.text(10, 32, 0x004980, string.limit("Сборник готовых 3д моделей",40)))
-window:addChild(GUI.text(12,33, 0x004980, string.limit("для печати на принтере",40)))
-window:addChild(GUI.text(16, 34, 0x004980, string.limit("в формате 3dm",40)))
-window:addChild(GUI.text(16,36, 0x004980, string.limit("Автор: MineCR",40)))
-window:addChild(GUI.text(8, 38, 0x004980, string.limit("создано на проекте guild-bt.ru",40)))
-window:addChild(GUI.text(13,5, 0x004980, string.limit("Для удобства работы",40)))
-window:addChild(GUI.text(16,6, 0x004980, string.limit("с приложением",40)))
-window:addChild(GUI.text(12, 7, 0x004980, string.limit("используйте разрешение",40)))
-window:addChild(GUI.text(15, 8, 0x004980, string.limit("не менее 150х50",40)))
+window:addChild(GUI.text(13,3, 0x004980, string.limit("Для удобства работы",40)))
+window:addChild(GUI.text(16,4, 0x004980, string.limit("с приложением",40)))
+window:addChild(GUI.text(12, 5, 0x004980, string.limit("используйте разрешение",40)))
+window:addChild(GUI.text(15, 6, 0x004980, string.limit("не менее 140х48",40)))
+window:addChild(GUI.image(2, 8, logo))
+window:addChild(GUI.text(10, 30, 0x004980, string.limit("Сборник готовых 3д моделей",40)))
+window:addChild(GUI.text(12,31, 0x004980, string.limit("для печати на принтере",40)))
+window:addChild(GUI.text(16, 32, 0x004980, string.limit("в формате 3dm",40)))
+window:addChild(GUI.text(16,34, 0x004980, string.limit("Автор: MineCR",40)))
+window:addChild(GUI.text(8, 36, 0x004980, string.limit("создано на проекте guild-bt.ru",40)))
 window:addChild(GUI.text(46, yhg-7, 0x004980, string.limit("страница ",40)))
 
 local listok = {}
