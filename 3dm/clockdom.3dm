@@ -221,7 +221,7 @@
       texture = "quartz_block_top"
     }
   },
-  label = "Часы "Домик"",
+  label = "Часы *Домик*",
   emitRedstone = false,
   tooltip = "Без кукушонка"
 }

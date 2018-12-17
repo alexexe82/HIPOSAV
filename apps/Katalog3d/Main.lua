@@ -63,6 +63,8 @@ local kat = {
 {"tesseract", "Тессеракт, четырехмерный куб"},
 {"umbrella", "Логотип корпорации Амбрелла (Umbrella)"},
 {"apple", "Логотип компании Эпл (Apple)"},
+{"mega", "Вывеска магазин МЕГА (4 блока)",4},
+
 }
  
 local mainContainerXY = GUI.fullScreenContainer()
@@ -115,12 +117,21 @@ for i = 1+mnogitel, lmno do
   listok[lst]:addChild(GUI.text(x+15, y , 0x696969, string.limit(kat[i][2],xwd- x-29)))
   listok[lst]:addChild(GUI.text(x, y + 1, 0xB62B00, string.limit(linewd,xwd- width-5)))
   listok[lst]:addChild(GUI.framedButton(xwd - 11, y-1, width, 3, 0x696969, 0x00B600, 0x880000, 0x880000, "Download")).onTouch = function()
+   if kat[i][3] == nil then
     local file = kat[i][1] .. ".3dm"
    
       mainContainer:drawOnScreen()
         loadfile("/bin/wget.lua")("https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/3dm/" .. file, "/3dm/" .. file, "-FQ")
     GUI.alert("Загрузка завершена! Файл находится по адресу /3dm/" .. file)
- 
+   elseif kat[i][3] ~= nil then
+    for modelnum = 1,kat[i][3] do -- многоблочные модели
+    local file = kat[i][1] .. tostring(modelnum) .. ".3dm"
+   
+      -- mainContainer:drawOnScreen()
+        loadfile("/bin/wget.lua")("https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/3dm/" .. file, "/3dm/" .. file, "-FQ")
+    end -- многоблочные модели энд
+    GUI.alert("Загрузка завершена! Файл находится по адресу /3dm/" .. file)
+   end
   end
  
   y =  y + verticalSpace + 3
