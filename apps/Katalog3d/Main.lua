@@ -68,8 +68,8 @@ local kat = {
 }
  
 local mainContainerXY = GUI.fullScreenContainer()
-local xwd = mainContainerXY.width
-local yhg = mainContainerXY.height
+local xwd = mainContainerXY.width - 15
+local yhg = mainContainerXY.height - 30
 local linewd = "_"
 local strZ = 1
 for i = 1,xwd - 60 do
@@ -80,10 +80,10 @@ local mainContainer, window = MineOSInterface.addWindow(GUI.titledWindow(1, 1, x
  
 window:addChild(GUI.image(2, 10, logo))
 window:addChild(GUI.text(10, 32, 0x004980, string.limit("Сборник готовых 3д моделей",40)))
-window:addChild(GUI.text(12,34, 0x004980, string.limit("для печати на принтере",40)))
-window:addChild(GUI.text(16, 36, 0x004980, string.limit("в формате 3dm",40)))
-window:addChild(GUI.text(16,39, 0x004980, string.limit("Автор: MineCR",40)))
-window:addChild(GUI.text(8, 41, 0x004980, string.limit("создано на проекте guild-bt.ru",40)))
+window:addChild(GUI.text(12,33, 0x004980, string.limit("для печати на принтере",40)))
+window:addChild(GUI.text(16, 34, 0x004980, string.limit("в формате 3dm",40)))
+window:addChild(GUI.text(16,36, 0x004980, string.limit("Автор: MineCR",40)))
+window:addChild(GUI.text(8, 38, 0x004980, string.limit("создано на проекте guild-bt.ru",40)))
 window:addChild(GUI.text(13,5, 0x004980, string.limit("Для удобства работы",40)))
 window:addChild(GUI.text(16,6, 0x004980, string.limit("с приложением",40)))
 window:addChild(GUI.text(12, 7, 0x004980, string.limit("используйте разрешение",40)))
