@@ -68,7 +68,8 @@ local kat = {
 {"stulvint", "Винтажный стул со спинкой (2 блока)",2},
 {"zanaveska", "Занавеска из бордовой ткани (2 блока)",2},
 {"stolmassiv", "Массивный стол (Из темного дерева)"},
-
+{"aperture", "Портальная пушка (Из игры PORTAL)"},
+{"moto", "Мотоцикл Харлей Девидсон (3 блока)",3},
 }
  
 local mainContainerXY = GUI.fullScreenContainer()
