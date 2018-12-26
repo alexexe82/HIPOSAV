@@ -72,16 +72,16 @@ local kat = {
 {"moto", "Мотоцикл Харлей Девидсон (4 блока)",4},
 }
  
-local mainContainerXY = GUI.fullScreenContainer()
-local xwd = mainContainerXY.width - 15
-local yhg = mainContainerXY.height - 5
+local applicationXY = GUI.application()
+local xwd = applicationXY.width - 15
+local yhg = applicationXY.height - 5
 local linewd = "_"
 local strZ = 1
 for i = 1,xwd - 60 do
  linewd = linewd.."_"
 end
  
-local mainContainer, window = MineOSInterface.addWindow(GUI.titledWindow(1, 1, xwd, yhg - 5, "Katalog3d "..Version, true))
+local application, window = MineOSInterface.addWindow(GUI.titledWindow(1, 1, xwd, yhg - 5, "Katalog3d "..Version, true))
 window:addChild(GUI.text(13,3, 0x004980, string.limit("Для удобства работы",40)))
 window:addChild(GUI.text(16,4, 0x004980, string.limit("с приложением",40)))
 window:addChild(GUI.text(12, 5, 0x004980, string.limit("используйте разрешение",40)))
@@ -106,7 +106,7 @@ window:addChild(GUI.framedButton(54+(6*lst), yhg - 8, 5, 3, 0x696969, 0x00B600, 
     listok[tmp].hidden = true
     end
     listok[lst].hidden = false
-        --  mainContainer:drawOnScreen()
+        --  application:draw()
         end --button
 listok[lst] = window:addChild(GUI.container(1, 1, xwd, yhg - 10))
 if lst ~= 1 then listok[lst].hidden = true end
@@ -125,14 +125,14 @@ for i = 1+mnogitel, lmno do
     for modelnum = 1,kat[i][3] do -- многоблочные модели
     local file = kat[i][1] .. tostring(modelnum) .. ".3dm"
    
-      -- mainContainer:drawOnScreen()
+      -- application:draw()
         loadfile("/bin/wget.lua")("https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/3dm/" .. file, "/3dm/" .. file, "-FQ")
     end -- многоблочные модели энд
     GUI.alert("Загрузка завершена! Файлы находятся по адресу /3dm/")
     else
     local file = kat[i][1] .. ".3dm"
    
-      mainContainer:drawOnScreen()
+      application:draw()
         loadfile("/bin/wget.lua")("https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/3dm/" .. file, "/3dm/" .. file, "-FQ")
     GUI.alert("Загрузка завершена! Файл находится по адресу /3dm/" .. file)
    end
@@ -146,4 +146,4 @@ mnogitel = mnogitel + lststr
 end --lst
  
  
-mainContainer:drawOnScreen()
+application:draw()
