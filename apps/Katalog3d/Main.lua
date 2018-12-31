@@ -140,7 +140,7 @@ for i = 1+mnogitel, lmno do
     else
     local file = kat[i][1] .. ".3dm"
    
-      mainContainer:drawOnScreen()
+      --mainContainer:drawOnScreen()
         loadfile("/bin/wget.lua")("https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/3dm/" .. file, "/3dm/" .. file, "-FQ")
     GUI.alert("Загрузка завершена! Файл находится по адресу /3dm/" .. file)
    end
@@ -154,4 +154,4 @@ mnogitel = mnogitel + lststr
 end --lst
  
  
-mainContainer:drawOnScreen()
+mainContainer:draw()
