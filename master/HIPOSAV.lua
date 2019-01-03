@@ -48,12 +48,13 @@ yScr = 30
 end
 local xCen, yCen = math.ceil(xScr/2), math.ceil(yScr/2)
 
+-- строка для тмп ___  iconEXIT.pic  Выключение ПК  tq.pic /HIPOSAV/tquest.lua
 --desk1 = {}
 --desk2 = {}
 --desk3 = {}
-local desk1 = {"iconNC.pic","iconNANO.pic","nano2.pic","iconEXIT.pic","battleship.pic","saper.pic","info.pic","chat.pic","ops.pic","pstb.pic","tq.pic"}
-local desk2 = {"/HIPOSAV/nc.lua","/HIPOSAV/nanobots.lua","/HIPOSAV/nanoplus.lua","/HIPOSAV/exit.lua","/HIPOSAV/Battleship.lua","/HIPOSAV/saper.lua","/HIPOSAV/info.lua","/HIPOSAV/chat.lua","/HIPOSAV/ops.lua","/HIPOSAV/pstb.lua","/HIPOSAV/tquest.lua"}
-local desk3 = {"  Менеджер","Упр.нанитами"," Наноботы-2","Выключение ПК","Морской бой","   Сапёр","   Инфо ПК","     Чат","Диспетчер HDD","  Pastebin","   TQueST"}
+local desk1 = {"iconNC.pic","iconNANO.pic","nano2.pic","tq.pic","battleship.pic","saper.pic","info.pic","chat.pic","ops.pic","pstb.pic","iconEXIT.pic","magnit.pic"}
+local desk2 = {"/HIPOSAV/nc.lua","/HIPOSAV/nanobots.lua","/HIPOSAV/nanoplus.lua","/HIPOSAV/tquest.lua","/HIPOSAV/Battleship.lua","/HIPOSAV/saper.lua","/HIPOSAV/info.lua","/HIPOSAV/chat.lua","/HIPOSAV/ops.lua","/HIPOSAV/pstb.lua","/HIPOSAV/exit.lua","/HIPOSAV/magnit.lua"}
+local desk3 = {"  Менеджер","Упр.нанитами"," Наноботы-2","   TQueST","Морской бой","   Сапёр","   Инфо ПК","     Чат","Диспетчер HDD","  Pastebin","Выключение ПК","   Магнит"}
 local desk4 = {}
 local desk5 = {}
 exityn = 1
@@ -215,7 +216,7 @@ term.setCursor(xScr-40,2)
 print ("│         │")
 term.setCursor(xScr-38,2)
 gpu.setForeground(0x66FFFF)
-local resdisp = ""..tostring(maxX).." x "..tostring(maxY)
+local resdisp = ""..tostring(math.ceil(maxX)).." x "..tostring(math.ceil(maxY))
 print (resdisp)
 --                         ---------------------------        ---
 
