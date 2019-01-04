@@ -106,7 +106,7 @@ while i < xCen+25 do
   gpu.setForeground(foreg[j])
   gpu.setBackground(0x000000)
   term.setCursor(xCen-10, yCen+11)
-  print ("Заходи на guild-bt.ru")
+  print ("Создано на guild-bt.ru")
   i=i+1
   os.sleep(0.0005)
 end
