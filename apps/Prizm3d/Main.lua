@@ -54,7 +54,7 @@ end
 updateProxy("hologram")
 
 -- загружаем доп. оборудование
-function trytofind(name)
+local function trytofind(name)
   if com.isAvailable(name) then
     return com.getPrimary(name)
   else
@@ -64,7 +64,7 @@ end
 
 local h = proxies.hologram
 
-function setHexColor(n, r, g, b)
+local function setHexColor(n, r, g, b)
   local hexcolor = rgb2hex(r,g,b)
   hexcolortable[n] = hexcolor
   darkhexcolors[n] = bit32.rshift(bit32.band(hexcolor, 0xfefefe), 1)
@@ -75,12 +75,12 @@ end
 
 -- ========================================= H O L O G R A P H I C S ========================================= --
 holo = {}
-function set(x, y, z, value)
+local function set(x, y, z, value)
   if holo[x] == nil then holo[x] = {} end
   if holo[x][y] == nil then holo[x][y] = {} end
   holo[x][y][z] = value
 end
-function get(x, y, z)
+local function get(x, y, z)
   if holo[x] ~= nil and holo[x][y] ~= nil and holo[x][y][z] ~= nil then 
     return holo[x][y][z]
   else
@@ -88,7 +88,7 @@ function get(x, y, z)
   end
 end
 
-function save(filename)
+local function save(filename)
   -- сохраняем палитру
   file = io.open(filename, 'wb')
   for i=1, 3 do
@@ -112,7 +112,7 @@ function save(filename)
   file:close()
 end
 
-function load(filename)
+local function load(filename)
   if true then -- fs.exists(filename) then
     -- file = fs.readTable(filename)
 	file = fs.open(filename, 'rb')
@@ -149,7 +149,7 @@ function load(filename)
 end
 
 
-function drawHologram()
+local function drawHologram()
   -- проверка на наличие проектора
   -- h = trytofind('hologram')
   if true then -- h ~= nil then
