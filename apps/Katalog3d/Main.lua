@@ -11,6 +11,10 @@
 --  | (_>  < | | | | | (_) | | | | |_| | | | |
 --   \___/\/ \_| |_|  \___/|_| |_|\__,_|_| |_|
 
+-- the English version can be downloaded at
+-- https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/apps/Katalog3d/eng/Main.lua
+-- sorry for the inconvenience
+
 -- благодарочка Фронуну от Майна
 
 local fs = require("Filesystem")
