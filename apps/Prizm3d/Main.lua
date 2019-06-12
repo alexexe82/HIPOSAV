@@ -41,9 +41,10 @@ goldcolor = 0xFFDF00
 -- размер
 -- proxies.hologram.setScale(projectorScaleSlider.value)
 
+filen = ""
 local proxies = {}
 
-local function updateProxy(name)
+function updateProxy(name)
 	proxies[name] = component.list(name)()
 	if proxies[name] then
 		proxies[name] = component.proxy(proxies[name])
@@ -54,7 +55,7 @@ end
 updateProxy("hologram")
 
 -- загружаем доп. оборудование
-local function trytofind(name)
+function trytofind(name)
   if com.isAvailable(name) then
     return com.getPrimary(name)
   else
@@ -62,9 +63,9 @@ local function trytofind(name)
   end
 end
 
-local h = proxies.hologram
+h = proxies.hologram
 
-local function setHexColor(n, r, g, b)
+function setHexColor(n, r, g, b)
   local hexcolor = rgb2hex(r,g,b)
   hexcolortable[n] = hexcolor
   darkhexcolors[n] = bit32.rshift(bit32.band(hexcolor, 0xfefefe), 1)
@@ -75,12 +76,12 @@ end
 
 -- ========================================= H O L O G R A P H I C S ========================================= --
 holo = {}
-local function set(x, y, z, value)
+function set(x, y, z, value)
   if holo[x] == nil then holo[x] = {} end
   if holo[x][y] == nil then holo[x][y] = {} end
   holo[x][y][z] = value
 end
-local function get(x, y, z)
+function get(x, y, z)
   if holo[x] ~= nil and holo[x][y] ~= nil and holo[x][y][z] ~= nil then 
     return holo[x][y][z]
   else
@@ -88,7 +89,7 @@ local function get(x, y, z)
   end
 end
 
-local function save(filename)
+function saveF(filename)
   -- сохраняем палитру
   file = io.open(filename, 'wb')
   for i=1, 3 do
@@ -112,7 +113,7 @@ local function save(filename)
   file:close()
 end
 
-local function loadF(filename)
+function loadF(filename)
   if true then -- fs.exists(filename) then
     -- file = fs.readTable(filename)
 	file = fs.open(filename, 'rb')
@@ -142,14 +143,14 @@ local function loadF(filename)
     file:close()
     return true
   else
-  GUI.alert("Файл "..file.." еще не скачан")
+  GUI.alert("Файл "..filen.." еще не скачан")
     --print("[ОШИБКА] Файл "..filename.." не найден.")
     return false
   end
 end
 
 
-local function drawHologram()
+function drawHologram()
   -- проверка на наличие проектора
   -- h = trytofind('hologram')
   if true then -- h ~= nil then
@@ -299,21 +300,21 @@ for i = 1+mnogitel, lmno do
   listok[lst]:addChild(GUI.text(x, y, 0xB62B00,text.limit(kat[i][1],width)))
   listok[lst]:addChild(GUI.text(x+15, y , 0x696969, text.limit(kat[i][2],xwd- x-29)))
   listok[lst]:addChild(GUI.text(x, y + 1, 0xB62B00, text.limit(linewd,xwd- width-5)))
-  --file = "3dholo/" .. kat[i][1] .. ".3d"
+  --filen = "3dholo/" .. kat[i][1] .. ".3d"
   listok[lst]:addChild(GUI.framedButton(xwd - 22, y-1, width, 3, 0x696969, 0x00B600, 0x880000, 0x880000, "Downld")).onTouch = function()
-    file = "/3dholo/" .. kat[i][1] .. ".3d"
+    filen = kat[i][1] .. ".3d"
     --workspace:draw()
-    internet.download("https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/3dholo/" .. file, "/3dholo/" .. file)
-    GUI.alert("Загрузка завершена! Файл находится по адресу /3dholo/" .. file)
+    internet.download("https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/3dholo/" .. filen, "/3dholo/" .. filen)
+    GUI.alert("Загрузка завершена! Файл находится по адресу /3dholo/" .. filen)
   end
  
  -- кнопка отображения на проектор
  listok[lst]:addChild(GUI.framedButton(xwd - 11, y-1, width, 3, 0x696969, 0x00B600, 0x880000, 0x880000, "Holo")).onTouch = function()
-    file = "/3dholo/" .. kat[i][1] .. ".3d"
+    filen = kat[i][1] .. ".3d"
     --workspace:draw()
-    --internet.download("https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/3dholo/" .. file, "/3dholo/" .. file)
-    --GUI.alert("Загрузка завершена! Файл находится по адресу /3dholo/" .. file)
-	loadF(file)
+    --internet.download("https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/3dholo/" .. filen, "/3dholo/" .. filen)
+    --GUI.alert("Загрузка завершена! Файл находится по адресу /3dholo/" .. filen)
+	loadF("/3dholo/" .. filen)
 	drawHologram()
 	
   end
