@@ -80,7 +80,16 @@ local kat = {
 {"monik", "The monitor is turned off, LED display"},
 {"onoff_m", "Small switch lever"},
 {"onoff_r", "Switch the lever in the regulator"},
-
+{"wifi", "WiFi label"},
+{"strelka", "arrow"},
+{"ussr", "label USSR"},
+{"ne4to", "black cat"},
+{"tank", "green tank. WoT"},
+{"kubok", "We are the champions..."},
+{"minihome", "Mini home"},
+{"aquarium", "Golden fish"},
+{"aerofly", "top gun"},
+{"cooler", "summer. hot"},
 }
  
 local workspaceXY = GUI.workspace()
