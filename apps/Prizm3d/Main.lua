@@ -112,7 +112,7 @@ local function save(filename)
   file:close()
 end
 
-local function load(filename)
+local function loadF(filename)
   if true then -- fs.exists(filename) then
     -- file = fs.readTable(filename)
 	file = fs.open(filename, 'rb')
@@ -313,7 +313,7 @@ for i = 1+mnogitel, lmno do
     --workspace:draw()
     --internet.download("https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/3dholo/" .. file, "/3dholo/" .. file)
     --GUI.alert("Загрузка завершена! Файл находится по адресу /3dholo/" .. file)
-	load(file)
+	loadF(file)
 	drawHologram()
 	
   end
