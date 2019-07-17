@@ -180,6 +180,7 @@ end
 
 ruen()
  
+local pusto = "                                                               " 
 local workspaceXY = GUI.workspace()
 local xwd = workspaceXY.width - 15
 local yhg = workspaceXY.height - 5
@@ -239,7 +240,7 @@ for i = 1+mnogitel, lmno do
 -- local j = i
 -- if j > #kat then j = #kat end
   listok[lst]:addChild(GUI.text(x, y, 0xB62B00,text.limit(kat[i][1],width)))
-  listok[lst]:addChild(GUI.text(x+15, y , 0x696969, text.limit(kat[i][2],xwd- x-29)))
+  listok[lst]:addChild(GUI.text(x+15, y , 0x696969, text.limit(kat[i][2]..pusto,xwd- x-29)))
   listok[lst]:addChild(GUI.text(x, y + 1, 0xB62B00, text.limit(linewd,xwd- width-5)))
   listok[lst]:addChild(GUI.framedButton(xwd - 11, y-1, width, 3, 0x696969, 0x00B600, 0x880000, 0x880000, "Download")).onTouch = function()
     if kat[i][3] ~= nil and kat[i][3] > 1 then
