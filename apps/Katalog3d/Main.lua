@@ -100,6 +100,7 @@ local kat = {
 {"flag_ru", "Флаг в цвете. Россия."},
 {"flag_ua", "Флаг в цвете. Украина."},
 {"flag_us", "Флаг в цвете. США."},
+{"flag_eu", "Флаг в цвете. Евросоюз."},
 
 }
  
@@ -107,7 +108,7 @@ local workspaceXY = GUI.workspace()
 local xwd = workspaceXY.width - 15
 local yhg = workspaceXY.height - 5
 local linewd = "_"
-local strZ = "1"
+local strZ = " страница "
 for i = 1,xwd - 60 do
  linewd = linewd.."_"
 end
@@ -123,7 +124,7 @@ window:addChild(GUI.text(12,31, 0x004980, text.limit("для печати на �
 window:addChild(GUI.text(16, 32, 0x004980, text.limit("в формате 3dm",40)))
 window:addChild(GUI.text(16,34, 0x004980, text.limit("Автор: MineCR",40)))
 window:addChild(GUI.text(8, 36, 0x004980, text.limit("создано на проекте guild-bt.ru",40)))
-window:addChild(GUI.text(46, yhg-7, 0x004980, text.limit(strZ.." страница ",40)))
+window:addChild(GUI.text(46, yhg-7, 0x004980, text.limit(strZ,40)))
 
 local listok = {}
 local x, y, width, horizontalSpace, verticalSpace = 45, 3, 10, 2, 0
@@ -141,7 +142,7 @@ window:addChild(GUI.framedButton(54+(6*lst), yhg - 8, 5, 3, 0x696969, 0x00B600, 
         --  workspace:draw()
         end --button
 listok[lst] = window:addChild(GUI.container(1, 1, xwd, yhg - 10))
-strZ = tostring(lst)
+strZ = tostring(lst).." страница "
 if lst ~= 1 then listok[lst].hidden = true end
 --listok[lst]:setCellAlignment(3, 1, GUI.alignment.horizontal.left, GUI.alignment.vertical.bottom)
 --listok[lst].setCellAlignment(left,bottom)
