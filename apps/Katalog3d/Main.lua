@@ -197,6 +197,7 @@ window:addChild(GUI.framedButton(1, 2, 9, 3, 0x696969, 0x00B600, 0x880000, 0x880
  ru = 1
  end
  ruen()
+ displist()
 end
 window:addChild(GUI.text(13,3, 0x004980, text.limit("Для удобства работы",40)))
 window:addChild(GUI.text(16,4, 0x004980, text.limit("с приложением",40)))
@@ -216,6 +217,8 @@ local mnogitel = 0
 local lststr = math.ceil((yhg-5) / 4)
 local lstmax = math.ceil(#kat / lststr)
 local colred =  0xB62B00
+
+function displist()
 for lst = 1, lstmax do --lst
 window:addChild(GUI.framedButton(54+(6*lst), yhg - 8, 5, 3, 0x696969, 0x00B600, 0x880000, 0x880000, lst)).onTouch = function()
     --strZ = lst
@@ -263,6 +266,8 @@ end
  y = 3
 mnogitel = mnogitel + lststr
 end --lst
- 
- 
+end -- displist
+
+displist()
+
 workspace:draw()
