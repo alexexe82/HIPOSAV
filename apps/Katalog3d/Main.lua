@@ -151,6 +151,7 @@ if lmno > #kat then lmno = #kat end
 for i = 1+mnogitel, lmno do
 -- local j = i
 -- if j > #kat then j = #kat end
+  listok[lst]:addChild(GUI.text(46, yhg-7, 0x004980, text.limit(tostring(lst).." страница ",40)))
   listok[lst]:addChild(GUI.text(x, y, 0xB62B00,text.limit(kat[i][1],width)))
   listok[lst]:addChild(GUI.text(x+15, y , 0x696969, text.limit(kat[i][2],xwd- x-29)))
   listok[lst]:addChild(GUI.text(x, y + 1, 0xB62B00, text.limit(linewd,xwd- width-5)))
