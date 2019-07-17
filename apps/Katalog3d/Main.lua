@@ -36,6 +36,7 @@ local kat = {}
 ru = 1
 
 function ruen()
+kat = {}
 if ru == 1 then
 kat = {
 {"buttonbig", "Рычаг вкл|выкл (выдает сигнал редстоуна)"},
