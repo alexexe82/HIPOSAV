@@ -107,7 +107,7 @@ local workspaceXY = GUI.workspace()
 local xwd = workspaceXY.width - 15
 local yhg = workspaceXY.height - 5
 local linewd = "_"
-local strZ = 1
+local strZ = "1"
 for i = 1,xwd - 60 do
  linewd = linewd.."_"
 end
@@ -133,7 +133,7 @@ local lstmax = math.ceil(#kat / lststr)
 local colred =  0xB62B00
 for lst = 1, lstmax do --lst
 window:addChild(GUI.framedButton(54+(6*lst), yhg - 8, 5, 3, 0x696969, 0x00B600, 0x880000, 0x880000, lst)).onTouch = function()
-    strZ = lst
+    --strZ = lst
     for tmp = 1, lstmax do
     listok[tmp].hidden = true
     end
@@ -141,6 +141,7 @@ window:addChild(GUI.framedButton(54+(6*lst), yhg - 8, 5, 3, 0x696969, 0x00B600, 
         --  workspace:draw()
         end --button
 listok[lst] = window:addChild(GUI.container(1, 1, xwd, yhg - 10))
+strZ = tostring(lst)
 if lst ~= 1 then listok[lst].hidden = true end
 --listok[lst]:setCellAlignment(3, 1, GUI.alignment.horizontal.left, GUI.alignment.vertical.bottom)
 --listok[lst].setCellAlignment(left,bottom)
