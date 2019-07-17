@@ -198,6 +198,8 @@ window:addChild(GUI.framedButton(1, 2, 9, 3, 0x696969, 0x00B600, 0x880000, 0x880
  elseif ru == 0 then
  ru = 1
  end
+ kat=nil
+ listok=nil
  ruen()
  displist()
 end
