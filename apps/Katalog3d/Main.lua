@@ -141,7 +141,7 @@ window:addChild(GUI.framedButton(54+(6*lst), yhg - 8, 5, 3, 0x696969, 0x00B600, 
     listok[lst].hidden = false
         --  workspace:draw()
         end --button
-listok[lst] = window:addChild(GUI.container(1, 1, xwd, yhg - 10))
+listok[lst] = window:addChild(GUI.container(1, 1, xwd, yhg - 6))
 strZ = tostring(lst).." страница "
 if lst ~= 1 then listok[lst].hidden = true end
 --listok[lst]:setCellAlignment(3, 1, GUI.alignment.horizontal.left, GUI.alignment.vertical.bottom)
