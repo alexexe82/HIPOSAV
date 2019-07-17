@@ -94,6 +94,13 @@ local kat = {
 {"aerofly", "Миниатюрный самолет. Сверхзвуковой"},
 {"cooler", "Вентилятор настольный, если очень жарко"},
 {"ecorp", "Логотип корпорации Е-корп из mr.Robot"},
+{"flag_by", "Флаг в цвете. Беларусь."},
+{"flag_de", "Флаг в цвете. Германия."},
+{"flag_kz", "Флаг в цвете. Казахстан."},
+{"flag_ru", "Флаг в цвете. Россия."},
+{"flag_ua", "Флаг в цвете. Украина."},
+{"flag_us", "Флаг в цвете. США."},
+
 }
  
 local workspaceXY = GUI.workspace()
@@ -116,7 +123,7 @@ window:addChild(GUI.text(12,31, 0x004980, text.limit("для печати на �
 window:addChild(GUI.text(16, 32, 0x004980, text.limit("в формате 3dm",40)))
 window:addChild(GUI.text(16,34, 0x004980, text.limit("Автор: MineCR",40)))
 window:addChild(GUI.text(8, 36, 0x004980, text.limit("создано на проекте guild-bt.ru",40)))
-window:addChild(GUI.text(46, yhg-7, 0x004980, text.limit("страница ",40)))
+window:addChild(GUI.text(46, yhg-7, 0x004980, text.limit(strZ.." страница ",40)))
 
 local listok = {}
 local x, y, width, horizontalSpace, verticalSpace = 45, 3, 10, 2, 0
@@ -126,6 +133,7 @@ local lstmax = math.ceil(#kat / lststr)
 local colred =  0xB62B00
 for lst = 1, lstmax do --lst
 window:addChild(GUI.framedButton(54+(6*lst), yhg - 8, 5, 3, 0x696969, 0x00B600, 0x880000, 0x880000, lst)).onTouch = function()
+    strZ = lst
     for tmp = 1, lstmax do
     listok[tmp].hidden = true
     end
