@@ -200,6 +200,7 @@ window:addChild(GUI.framedButton(1, 2, 9, 3, 0x696969, 0x00B600, 0x880000, 0x880
  end
  kat=nil
  listok=nil
+ cleartab()
  ruen()
  displist()
 end
@@ -221,6 +222,16 @@ local mnogitel = 0
 local lststr = math.ceil((yhg-5) / 4)
 local lstmax = math.ceil(#kat / lststr)
 local colred =  0xB62B00
+
+function cleartab()
+ mnogitel = 0
+ lststr = math.ceil((yhg-5) / 4)
+ lstmax = math.ceil(#kat / lststr)
+ 
+for lst = 1, lstmax do --lst
+ listok[lst] = nil
+end
+end
 
 function displist()
  listok = {}
