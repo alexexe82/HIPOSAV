@@ -224,11 +224,7 @@ local lstmax = math.ceil(#kat / lststr)
 local colred =  0xB62B00
 
 function cleartab()
- mnogitel = 0
- lststr = math.ceil((yhg-5) / 4)
- lstmax = math.ceil(#kat / lststr)
- 
-for lst = 1, lstmax do --lst
+for lst = 1, #listok do --lst
  listok[lst] = nil
 end
 end
