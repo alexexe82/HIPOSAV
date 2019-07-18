@@ -198,10 +198,10 @@ window:addChild(GUI.framedButton(1, 2, 9, 3, 0x696969, 0x00B600, 0x880000, 0x880
  elseif ru == 0 then
  ru = 1
  end
+ settab()
  kat=nil
  listok=nil
  ruen()
- cleartab()
  displist()
 end
 window:addChild(GUI.text(13,3, 0x004980, text.limit("Для удобства работы",40)))
@@ -223,10 +223,12 @@ local lststr = math.ceil((yhg-5) / 4)
 local lstmax = math.ceil(#kat / lststr)
 local colred =  0xB62B00
 
-function cleartab()
-for lst = 1, #listok do --lst
- listok[lst] = nil
-end
+function settab()
+    --strZ = lst
+    for tmp = 1, lstmax do
+    listok[tmp].hidden = true
+    end
+    listok[#listok].hidden = false
 end
 
 function displist()
