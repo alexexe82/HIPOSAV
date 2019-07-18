@@ -200,8 +200,8 @@ window:addChild(GUI.framedButton(1, 2, 9, 3, 0x696969, 0x00B600, 0x880000, 0x880
  end
  kat=nil
  listok=nil
- cleartab()
  ruen()
+ cleartab()
  displist()
 end
 window:addChild(GUI.text(13,3, 0x004980, text.limit("Для удобства работы",40)))
