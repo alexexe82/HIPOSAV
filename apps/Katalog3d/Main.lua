@@ -105,6 +105,9 @@ kat = {
 {"flag_ua", "Флаг в цвете. Украина."},
 {"flag_us", "Флаг в цвете. США."},
 {"flag_eu", "Флаг в цвете. Евросоюз."},
+{"flag_pi", "Флаг в цвете. Пиратский."},
+{"4e", "Череп. Многоблочный",5},
+{"rip", "Надгробие. Место под табличку"},
 
 }
 elseif ru == 0 then
@@ -175,6 +178,9 @@ elseif ru == 0 then
 {"flag_ua", "Flag. Ukraina"},
 {"flag_us", "Flag. USA"},
 {"flag_eu", "Flag. Euro"},
+{"flag_pi", "Flag. Pirat"},
+{"4e", "Skeleton head. Multiblocks",5},
+{"rip", "Tombstone"},
 }
 end
 end 
