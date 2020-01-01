@@ -1,0 +1,18 @@
+{
+  label = "ПАНДА",
+  lightLevel = 15,
+  shapes = {
+    { 0,0,11,16,5,16,texture = "wool_colored_white", tint = 0xeeeeee },
+    { 3,0,10,13,1,16,texture = "wool_colored_white", tint = 0xeeeeee },
+    { 4,1,10,12,2,16,texture = "wool_colored_white", tint = 0xeeeeee },
+    { 5,2,10,11,3,16,texture = "wool_colored_white", tint = 0xeeeeee },
+    { 0,5,11,16,9,16,texture = "wool_colored_white", tint = 0x222222 },
+    { 0,9,12,16,11,16,texture = "wool_colored_white", tint = 0x222222 },
+    { 1,9,11,15,10,16,texture = "wool_colored_white", tint = 0x222222 },
+    { 3,10,11,13,11,16,texture = "wool_colored_white", tint = 0x222222 },
+    { 0,11,13,16,13,16,texture = "wool_colored_white", tint = 0x222222 },
+    { 1,11,12,15,12,16,texture = "wool_colored_white", tint = 0x222222 },
+    { 6,15,12,10,16,16,texture = "wool_colored_white", tint = 0xeeeeee },
+    { 7,15,11,9,16,12,texture = "wool_colored_white", tint = 0x222222 },
+  }
+},

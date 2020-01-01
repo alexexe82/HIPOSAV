@@ -1,0 +1,11 @@
+{
+  label = "ПАНДА",
+  lightLevel = 15,
+  shapes = {
+    { 0,0,0,16,5,1,texture = "wool_colored_white", tint = 0xeeeeee },
+    { 1,0,1,15,5,2,texture = "wool_colored_white", tint = 0xeeeeee },
+    { 0,5,0,16,11,1,texture = "wool_colored_white", tint = 0x222222 },
+    { 1,5,1,15,11,2,texture = "wool_colored_white", tint = 0x222222 },
+    { 1,11,0,15,12,1,texture = "wool_colored_white", tint = 0x222222 },
+  }
+},

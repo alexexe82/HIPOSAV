@@ -1,0 +1,22 @@
+{
+  label = "ПАНДА",
+  lightLevel = 15,
+  shapes = {
+    { 8,0,15,12,1,16,texture = "wool_colored_white", tint = 0x222222 },
+    { 9,0,14,12,1,16,texture = "wool_colored_white", tint = 0x222222 },
+    { 10,0,13,12,1,16,texture = "wool_colored_white", tint = 0x222222 },
+    { 12,0,13,13,1,14,texture = "wool_colored_white", tint = 0x222222 },
+    { 13,0,13,16,5,16,texture = "wool_colored_white", tint = 0xeeeeee },
+    { 14,0,12,16,5,16,texture = "wool_colored_white", tint = 0xeeeeee },
+    { 15,0,11,16,5,16,texture = "wool_colored_white", tint = 0xeeeeee },
+    { 13,5,13,16,10,16,texture = "wool_colored_white", tint = 0x222222 },
+    { 14,5,12,16,9,16,texture = "wool_colored_white", tint = 0x222222 },
+    { 15,5,11,16,8,16,texture = "wool_colored_white", tint = 0x222222 },
+    { 15,9,12,16,10,16,texture = "wool_colored_white", tint = 0x222222 },
+    { 13,10,14,16,11,16,texture = "wool_colored_white", tint = 0x222222 },
+    { 14,10,13,16,11,16,texture = "wool_colored_white", tint = 0x222222 },
+    { 14,11,14,16,12,16,texture = "wool_colored_white", tint = 0x222222 },
+    { 15,11,13,16,12,16,texture = "wool_colored_white", tint = 0x222222 },
+    { 15,12,15,16,13,16,texture = "wool_colored_white", tint = 0x222222 },
+  }
+},
