@@ -9,4 +9,4 @@
     { 3,13,1,13,16,12,texture = "wool_colored_white", tint = 0xeeeeee },
     { 2,15,0,14,16,13,texture = "wool_colored_white", tint = 0xeeeeee },
   }
-},
+}

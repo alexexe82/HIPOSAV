@@ -22,4 +22,4 @@
     { 6,15,7,12,16,8,texture = "wool_colored_white", tint = 0x222222 },
     { 8,15,8,12,16,9,texture = "wool_colored_white", tint = 0x222222 },
   }
-},
+}

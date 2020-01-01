@@ -8,4 +8,4 @@
     { 1,5,1,15,11,2,texture = "wool_colored_white", tint = 0x222222 },
     { 1,11,0,15,12,1,texture = "wool_colored_white", tint = 0x222222 },
   }
-},
+}

@@ -19,4 +19,4 @@
     { 15,11,13,16,12,16,texture = "wool_colored_white", tint = 0x222222 },
     { 15,12,15,16,13,16,texture = "wool_colored_white", tint = 0x222222 },
   }
-},
+}
