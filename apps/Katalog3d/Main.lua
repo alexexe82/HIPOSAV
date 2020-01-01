@@ -108,6 +108,12 @@ kat = {
 {"flag_pi", "Флаг в цвете. Пиратский."},
 {"4e", "Череп. Многоблочный",5},
 {"rip", "Надгробие. Место под табличку"},
+{"panda", "Большая панда, 16 блоков",16},
+{"svd", "Снайперская винтовка Дегтярева, на стену",2},
+{"2020NY", "Надпись 2К20, с новым 2020 вас (2 блока)",2},
+{"elka", "Елочка с игрушками и звездой (2 блока)",2},
+{"sanki", "Детские санки, почти новые"},
+{"snegovik", "Снеговик с морковкой (2 блока)",2},
 
 }
 elseif ru == 0 then
@@ -181,6 +187,12 @@ elseif ru == 0 then
 {"flag_pi", "Flag. Pirat"},
 {"4e", "Skeleton head. Multiblocks",5},
 {"rip", "Tombstone"},
+{"panda", "Big panda, 16 blocks",16},
+{"svd", "sniper rifle (2 blocks)",2},
+{"2020NY", "2020 (2 blocks)",2},
+{"elka", "christmas tree (2 blocks)",2},
+{"sanki", "children sledges"},
+{"snegovik", "snowman (2 blocks)",2},
 }
 end
 end 
