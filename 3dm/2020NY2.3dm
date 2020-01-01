@@ -1,0 +1,28 @@
+{
+  label = "2020",
+  lightLevel = 15,
+  shapes = {
+    { 1,1,11,7,2,13,texture = "opencomputers:White", tint = 0x0066ff },
+    { 11,1,11,14,2,13,texture = "opencomputers:White", tint = 0x0066ff },
+    { 1,2,11,2,4,13,texture = "opencomputers:White", tint = 0x0066ff },
+    { 6,2,11,7,3,13,texture = "opencomputers:White", tint = 0x0066ff },
+    { 10,2,11,11,3,13,texture = "opencomputers:White", tint = 0x0066ff },
+    { 14,2,11,15,3,13,texture = "opencomputers:White", tint = 0x0066ff },
+    { 0,3,15,14,11,16,texture = "opencomputers:White", tint = 0xee0000 },
+    { 9,3,11,10,12,13,texture = "opencomputers:White", tint = 0x0066ff },
+    { 15,3,11,16,12,13,texture = "opencomputers:White", tint = 0x0066ff },
+    { 2,4,11,3,5,13,texture = "opencomputers:White", tint = 0x0066ff },
+    { 3,5,11,4,6,13,texture = "opencomputers:White", tint = 0x0066ff },
+    { 14,5,15,15,9,16,texture = "opencomputers:White", tint = 0xee0000 },
+    { 4,6,11,5,7,13,texture = "opencomputers:White", tint = 0x0066ff },
+    { 5,7,11,6,8,13,texture = "opencomputers:White", tint = 0x0066ff },
+    { 6,8,11,7,12,13,texture = "opencomputers:White", tint = 0x0066ff },
+    { 1,10,11,2,12,13,texture = "opencomputers:White", tint = 0x0066ff },
+    { 2,12,11,3,13,13,texture = "opencomputers:White", tint = 0x0066ff },
+    { 5,12,11,6,13,13,texture = "opencomputers:White", tint = 0x0066ff },
+    { 10,12,11,11,13,13,texture = "opencomputers:White", tint = 0x0066ff },
+    { 14,12,11,15,13,13,texture = "opencomputers:White", tint = 0x0066ff },
+    { 3,13,11,5,14,13,texture = "opencomputers:White", tint = 0x0066ff },
+    { 11,13,11,14,14,13,texture = "opencomputers:White", tint = 0x0066ff },
+  }
+}

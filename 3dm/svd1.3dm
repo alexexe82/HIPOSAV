@@ -1,0 +1,13 @@
+{
+  label = "SVD",
+  lightLevel = 15,
+  shapes = {
+    { 12,1,15,14,6,16,texture = "opencomputers:White", tint = 0x222222 },
+    { 1,6,15,7,9,16,texture = "opencomputers:White", tint = 0x111111 },
+    { 10,6,15,16,8,16,texture = "opencomputers:White", tint = 0x111111 },
+    { 7,7,15,16,8,16,texture = "opencomputers:White", tint = 0x111111 },
+    { 15,8,15,16,11,16,texture = "opencomputers:White", tint = 0x222222 },
+    { 13,9,15,14,11,16,texture = "opencomputers:White", tint = 0x0033cc },
+    { 14,9,15,16,11,16,texture = "opencomputers:White", tint = 0x222222 },
+  }
+}

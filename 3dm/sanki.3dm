@@ -1,0 +1,18 @@
+{
+  label = "NFS",
+  lightLevel = 15,
+  shapes = {
+    { 4,0,3,5,1,14,texture = "opencomputers:White", tint = 0x999966 },
+    { 11,0,3,12,1,14,texture = "opencomputers:White", tint = 0x999966 },
+    { 4,1,2,5,3,3,texture = "opencomputers:White", tint = 0x999966 },
+    { 4,1,6,12,2,7,texture = "opencomputers:White", tint = 0x999966 },
+    { 4,1,11,12,2,12,texture = "opencomputers:White", tint = 0x999966 },
+    { 11,1,2,12,3,3,texture = "opencomputers:White", tint = 0x999966 },
+    { 5,2,6,7,3,14,texture = "opencomputers:White", tint = 0x009933 },
+    { 7,2,6,9,3,14,texture = "opencomputers:White", tint = 0xff3300 },
+    { 9,2,6,11,3,14,texture = "opencomputers:White", tint = 0xcccc00 },
+    { 4,3,3,5,4,4,texture = "opencomputers:White", tint = 0x999966 },
+    { 5,3,4,11,4,5,texture = "opencomputers:White", tint = 0x999966 },
+    { 11,3,3,12,4,4,texture = "opencomputers:White", tint = 0x999966 },
+  }
+}

@@ -1,0 +1,20 @@
+{
+  label = "NY2020",
+  lightLevel = 15,
+  shapes = {
+    { 5,0,7,11,2,9,texture = "opencomputers:White", tint = 0x006600 },
+    { 7,0,5,9,2,11,texture = "opencomputers:White", tint = 0x006600 },
+    { 8,0,4,9,1,5,texture = "opencomputers:White", tint = 0x00aa00 },
+    { 9,0,10,10,1,11,texture = "opencomputers:White", tint = 0x0066ff },
+    { 5,1,9,6,2,10,texture = "opencomputers:White", tint = 0xffff00 },
+    { 7,2,7,9,4,9,texture = "opencomputers:White", tint = 0x006600 },
+    { 7,4,7,9,12,9,texture = "opencomputers:White", tint = 0xcccc00 },
+    { 7,5,4,9,6,5,texture = "opencomputers:White", tint = 0xcccc00 },
+    { 7,5,11,9,6,12,texture = "opencomputers:White", tint = 0xcccc00 },
+    { 7,6,5,9,7,11,texture = "opencomputers:White", tint = 0xcccc00 },
+    { 7,7,6,9,10,10,texture = "opencomputers:White", tint = 0xcccc00 },
+    { 7,8,3,9,9,13,texture = "opencomputers:White", tint = 0xcccc00 },
+    { 7,9,4,9,10,12,texture = "opencomputers:White", tint = 0xcccc00 },
+    { 8,12,8,9,14,9,texture = "opencomputers:White", tint = 0xcccc00 },
+  }
+}
