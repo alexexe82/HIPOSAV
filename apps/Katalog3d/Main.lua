@@ -114,6 +114,9 @@ kat = {
 {"elka", "Елочка с игрушками и звездой (2 блока)",2},
 {"sanki", "Детские санки, почти новые"},
 {"snegovik", "Снеговик с морковкой (2 блока)",2},
+{"gre4a", "Тарелка гречки"},
+{"toiletpaper", "Туалетная бумага"},
+{"biohazard", "Знак биологического заражения"},
 
 }
 elseif ru == 0 then
@@ -193,6 +196,9 @@ elseif ru == 0 then
 {"elka", "christmas tree (2 blocks)",2},
 {"sanki", "children sledges"},
 {"snegovik", "snowman (2 blocks)",2},
+{"gre4a", "eat"},
+{"toiletpaper", "toilet papper"},
+{"biohazard", "biohazard !"},
 }
 end
 end 
