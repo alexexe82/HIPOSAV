@@ -275,6 +275,7 @@ end
 function ecs.duplicateFileSystem(fromAddress, toAddress)
 	local source, destination = ecs.findMount(fromAddress), ecs.findMount(toAddress)
 	ecs.info("auto", "auto", "", "Copying file system...")
+	print("bin/cp -rx "..source.."* "..destination)
 	shell.execute("bin/cp -rx "..source.."* "..destination)
 end
 
