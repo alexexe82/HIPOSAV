@@ -273,10 +273,11 @@ end
 
 --Скопировать файлы с одного диска на другой с заменой
 function ecs.duplicateFileSystem(fromAddress, toAddress)
-	local source, destination = ecs.findMount(fromAddress), ecs.findMount(toAddress)
-	ecs.info("auto", "auto", "", "Copying file system...")
-	print("bin/cp -rx "..source.."* "..destination)
-	shell.execute("bin/cp -rx "..source.."* "..destination)
+local s1, destination = ecs.findMount(fromAddress), ecs.findMount(toAddress)
+local source = "../"
+ecs.info("auto", "auto", "", "Copying file system...")
+print("bin/cp -rx "..source.."* "..destination)
+shell.execute("bin/cp -rx "..source.."* "..destination)
 end
 
 --Загрузка файла с пастебина
