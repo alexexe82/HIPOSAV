@@ -117,6 +117,13 @@ kat = {
 {"gre4a", "Тарелка гречки"},
 {"toiletpaper", "Туалетная бумага"},
 {"biohazard", "Знак биологического заражения"},
+{"dctop", "DC рулит !! Даешь мрачные комиксы !!"},
+{"boo", "Привидение, почти не страшное"},
+{"hand", "Знак направления, рука"},
+{"ikebana", "Икебана, из японии с любовью"},
+{"battery", "Батарея, полный заряд"},
+{"security", "Знак ведется видео съемка"},
+{"cam", "Камера наружнего наблюдения"},
 
 }
 elseif ru == 0 then
@@ -189,7 +196,7 @@ elseif ru == 0 then
 {"flag_eu", "Flag. Euro"},
 {"flag_pi", "Flag. Pirat"},
 {"4e", "Skeleton head. Multiblocks",5},
-{"rip", "Tombstone"},
+{"rip", "Old tombstone"},
 {"panda", "Big panda, 16 blocks",16},
 {"svd", "sniper rifle (2 blocks)",2},
 {"2020NY", "2020 (2 blocks)",2},
@@ -199,6 +206,13 @@ elseif ru == 0 then
 {"gre4a", "eat"},
 {"toiletpaper", "toilet papper"},
 {"biohazard", "biohazard !"},
+{"dctop", "DC rulezzz"},
+{"boo", "Ghost almost not scary"},
+{"hand", "Hand - direction indicator"},
+{"ikebana", "Ikebana, made in Japan"},
+{"battery", "Battery fully charged"},
+{"security", "Signboard - Video recording"},
+{"cam", "Video security camera"},
 }
 end
 end 
