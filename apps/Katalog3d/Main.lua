@@ -124,6 +124,10 @@ kat = {
 {"battery", "Батарея, полный заряд"},
 {"security", "Знак ведется видео съемка"},
 {"cam", "Камера наружнего наблюдения"},
+{"mineAge", "Памятник кирке"},
+{"piano", "Пианино (4 блока)",4},
+{"pianomod", "Стул к пианино"},
+{"redeye", "Взгляд из темноты (2 блока)",2},
 
 }
 elseif ru == 0 then
@@ -213,6 +217,10 @@ elseif ru == 0 then
 {"battery", "Battery fully charged"},
 {"security", "Signboard - Video recording"},
 {"cam", "Video security camera"},
+{"mineAge", "Monument (decor)"},
+{"piano", "Piano (4 blocks)",4},
+{"pianomod", "Piano chair"},
+{"redeye", "A look from the darkness (2 blocks)",2},
 }
 end
 end 
@@ -221,15 +229,15 @@ ruen()
  
 local pusto = "                                                               " 
 local workspaceXY = GUI.workspace()
-local xwd = workspaceXY.width - 15
-local yhg = workspaceXY.height - 5
+local xwd = workspaceXY.width - 2
+local yhg = workspaceXY.height - 1
 local linewd = "_"
 local strZ = " страница "
 for i = 1,xwd - 60 do
  linewd = linewd.."_"
 end
  
-local workspace, window = system.addWindow(GUI.titledWindow(1, 1, xwd, yhg - 5, "Katalog3d "..Version, true))
+local workspace, window = system.addWindow(GUI.titledWindow(1, 1, xwd, yhg - 1, "Katalog3d "..Version, true))
 window:addChild(GUI.framedButton(1, 2, 9, 3, 0x696969, 0x00B600, 0x880000, 0x880000, "ru/en")).onTouch = function()
  if ru == 1 then
  ru = 0
