@@ -38,6 +38,22 @@ ru = 1
 function ruen()
 kat = {}
 if ru == 1 then
+
+lclz = {
+head1 = "Для удобства работы       ",
+head2 = "с приложением             ",
+head3 = "используйте разрешение    ",
+head4 = "не менее 140х48           ",
+down1 = "Сборник готовых 3д моделей",
+down2 = "для печати на принтере    ",
+down3 = "в формате 3dm             ",
+avtor = "Автор: MineCR             ",
+made = "создано на проекте guild-bt.ru   ",
+strZruen = " страница ",
+alertFile = "Загрузка завершена! Файл находится по адресу /3dm/",
+alertFiles = "Загрузка завершена! Файлы находятся по адресу /3dm/",
+}
+
 kat = {
 {"buttonbig", "Рычаг вкл|выкл (выдает сигнал редстоуна)"},
 {"danger", "Знак опасности (Черный череп на желтом фоне)"},
@@ -128,9 +144,25 @@ kat = {
 {"piano", "Пианино (4 блока)",4},
 {"pianomod", "Стул к пианино"},
 {"redeye", "Взгляд из темноты (2 блока)",2},
-
+{"bigcooler", "Большой вентилятор (2 блока)",2},
+{"cd80", "Проигрыватель пластинок на винтажном столике"},
+{"robot", "Домашний робот-разнорабочий (2 блока)",2},
 }
 elseif ru == 0 then
+ lclz = {
+head1 = "for ease of operation,    ",
+head2 = "set the resolution        ",
+head3 = "to at least               ",
+head4 = "140х48                    ",
+down1 = "a collection of ready-made",
+down2 = "models for printing       ",
+down3 = "on a 3D printer           ",
+avtor = "Author: MineCR            ",
+made = "made on a project guild-bt.ru    ",
+strZruen = " page     ",
+alertFile = "the download is complete. the file are located along the path /3dm/",
+alertFiles = "the download is complete. the files are located along the path /3dm/",
+}
  kat = {
 {"buttonbig", "Lever on|off (outputs a Redstone signal)"},
 {"danger", "Danger sign (Black skull on yellow background)"},
@@ -221,6 +253,9 @@ elseif ru == 0 then
 {"piano", "Piano (4 blocks)",4},
 {"pianomod", "Piano chair"},
 {"redeye", "A look from the darkness (2 blocks)",2},
+{"bigcooler", "Large fan (2 blocks)",2},
+{"cd80", "A record player on an antique table"},
+{"robot", "Home robot handyman (2 blocks)",2},
 }
 end
 end 
@@ -232,7 +267,7 @@ local workspaceXY = GUI.workspace()
 local xwd = workspaceXY.width - 2
 local yhg = workspaceXY.height - 1
 local linewd = "_"
-local strZ = " страница "
+local strZ = lclz.strZruen
 for i = 1,xwd - 60 do
  linewd = linewd.."_"
 end
@@ -249,18 +284,26 @@ window:addChild(GUI.framedButton(1, 2, 9, 3, 0x696969, 0x00B600, 0x880000, 0x880
  listok=nil
  ruen()
  displist()
+ headerFooter()
 end
-window:addChild(GUI.text(13,3, 0x004980, text.limit("Для удобства работы",40)))
-window:addChild(GUI.text(16,4, 0x004980, text.limit("с приложением",40)))
-window:addChild(GUI.text(12, 5, 0x004980, text.limit("используйте разрешение",40)))
-window:addChild(GUI.text(15, 6, 0x004980, text.limit("не менее 140х48",40)))
+
+-- filesystem.exists(string path): boolean exists
+
+function headerFooter()
+window:addChild(GUI.text(12,3, 0x004980, text.limit(lclz.head1,40)))
+window:addChild(GUI.text(12,4, 0x004980, text.limit(lclz.head2,40)))
+window:addChild(GUI.text(12, 5, 0x004980, text.limit(lclz.head3,40)))
+window:addChild(GUI.text(12, 6, 0x004980, text.limit(lclz.head4,40)))
+window:addChild(GUI.text(8, 30, 0x004980, text.limit(lclz.down1,40)))
+window:addChild(GUI.text(8,31, 0x004980, text.limit(lclz.down2,40)))
+window:addChild(GUI.text(8, 32, 0x004980, text.limit(lclz.down3,40)))
+window:addChild(GUI.text(8,34, 0x004980, text.limit(lclz.avtor,40)))
+window:addChild(GUI.text(8, 36, 0x004980, text.limit(lclz.made,40)))
+end
+
+window:addChild(GUI.text(45, yhg-7, 0x004980, text.limit(strZ,40)))
 window:addChild(GUI.image(2, 8, logo))
-window:addChild(GUI.text(10, 30, 0x004980, text.limit("Сборник готовых 3д моделей",40)))
-window:addChild(GUI.text(12,31, 0x004980, text.limit("для печати на принтере",40)))
-window:addChild(GUI.text(16, 32, 0x004980, text.limit("в формате 3dm",40)))
-window:addChild(GUI.text(16,34, 0x004980, text.limit("Автор: MineCR",40)))
-window:addChild(GUI.text(8, 36, 0x004980, text.limit("создано на проекте guild-bt.ru",40)))
-window:addChild(GUI.text(46, yhg-7, 0x004980, text.limit(strZ,40)))
+headerFooter()
 
 local listok = {}
 local x, y, width, horizontalSpace, verticalSpace = 45, 3, 10, 2, 0
@@ -285,7 +328,7 @@ function displist()
  lstmax = math.ceil(#kat / lststr)
  colred =  0xB62B00
 for lst = 1, lstmax do --lst
-window:addChild(GUI.framedButton(54+(6*lst), yhg - 8, 5, 3, 0x696969, 0x00B600, 0x880000, 0x880000, lst)).onTouch = function()
+window:addChild(GUI.framedButton(51+(6*lst), yhg - 8, 5, 3, 0x696969, 0x00B600, 0x880000, 0x880000, lst)).onTouch = function()
     --strZ = lst
     for tmp = 1, lstmax do
     listok[tmp].hidden = true
@@ -294,8 +337,8 @@ window:addChild(GUI.framedButton(54+(6*lst), yhg - 8, 5, 3, 0x696969, 0x00B600, 
         --  workspace:draw()
         end --button
 listok[lst] = window:addChild(GUI.container(1, 1, xwd, yhg - 6))
-listok[lst]:addChild(GUI.text(46, yhg-7, 0x004980, text.limit(tostring(lst).." страница ",40)))
-strZ = tostring(lst).." страница "
+listok[lst]:addChild(GUI.text(45, yhg-7, 0x004980, text.limit(tostring(lst)..lclz.strZruen,40)))
+strZ = tostring(lst)..lclz.strZruen
 if lst ~= 1 then listok[lst].hidden = true end
 --listok[lst]:setCellAlignment(3, 1, GUI.alignment.horizontal.left, GUI.alignment.vertical.bottom)
 --listok[lst].setCellAlignment(left,bottom)
@@ -307,6 +350,17 @@ for i = 1+mnogitel, lmno do
   listok[lst]:addChild(GUI.text(x, y, 0xB62B00,text.limit(kat[i][1],width)))
   listok[lst]:addChild(GUI.text(x+15, y , 0x696969, text.limit(kat[i][2]..pusto,xwd- x-29)))
   listok[lst]:addChild(GUI.text(x, y + 1, 0xB62B00, text.limit(linewd,xwd- width-5)))
+  
+  if kat[i][3] ~= nil and kat[i][3] > 1 then 
+   if fs.exists("/3dm/" .. kat[i][1] .. "1.3dm") then
+    listok[lst]:addChild(GUI.text(xwd-18, y, 0x00B600, text.limit("[▼]",xwd-12)))
+   end
+  else
+   if fs.exists("/3dm/" .. kat[i][1] .. ".3dm") then
+    listok[lst]:addChild(GUI.text(xwd-18, y, 0x00B600, text.limit("[▼]",xwd-12)))
+   end
+  end
+  
   listok[lst]:addChild(GUI.framedButton(xwd - 11, y-1, width, 3, 0x696969, 0x00B600, 0x880000, 0x880000, "Download")).onTouch = function()
     if kat[i][3] ~= nil and kat[i][3] > 1 then
     for modelnum = 1,kat[i][3] do -- многоблочные модели
@@ -315,13 +369,13 @@ for i = 1+mnogitel, lmno do
       -- workspace:draw()
       internet.download("https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/3dm/" .. file, "/3dm/" .. file)
     end -- многоблочные модели энд
-    GUI.alert("Загрузка завершена! Файлы находятся по адресу /3dm/")
+    GUI.alert(lclz.alertFiles)
     else
     local file = kat[i][1] .. ".3dm"
    
       --workspace:draw()
         internet.download("https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/3dm/" .. file, "/3dm/" .. file)
-    GUI.alert("Загрузка завершена! Файл находится по адресу /3dm/" .. file)
+    GUI.alert(lclz.alertFile .. file)
    end
   end
  

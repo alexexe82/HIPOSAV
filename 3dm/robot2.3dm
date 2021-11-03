@@ -1,0 +1,212 @@
+{
+  shapes = {
+    [1] = {
+      [1] = 3,
+      [2] = 6,
+      [3] = 8,
+      [4] = 4,
+      [5] = 10,
+      [6] = 10,
+      tint = 27968,
+      texture = "quartz_block_top"
+    },
+    [2] = {
+      [1] = 6,
+      [2] = 4,
+      [3] = 5,
+      [4] = 10,
+      [5] = 12,
+      [6] = 6,
+      tint = 3398655,
+      texture = "opencomputers:PowerConverterSide"
+    },
+    [3] = {
+      [1] = 4,
+      [2] = 6,
+      [3] = 5,
+      [4] = 12,
+      [5] = 10,
+      [6] = 6,
+      tint = 3398655,
+      texture = "opencomputers:PowerConverterSide"
+    },
+    [4] = {
+      [1] = 5,
+      [2] = 5,
+      [3] = 5,
+      [4] = 11,
+      [5] = 11,
+      [6] = 6,
+      tint = 3398655,
+      texture = "opencomputers:PowerConverterSide"
+    },
+    [5] = {
+      [1] = 4,
+      [2] = 5,
+      [3] = 6,
+      [4] = 12,
+      [5] = 11,
+      [6] = 12,
+      texture = "opencomputers:AdapterSide"
+    },
+    [6] = {
+      [1] = 5,
+      [2] = 11,
+      [3] = 6,
+      [4] = 11,
+      [5] = 12,
+      [6] = 12,
+      texture = "opencomputers:AdapterSide"
+    },
+    [7] = {
+      [1] = 6,
+      [2] = 6,
+      [3] = 12,
+      [4] = 10,
+      [5] = 11,
+      [6] = 13,
+      texture = "opencomputers:AdapterSide"
+    },
+    [8] = {
+      [1] = 5,
+      [2] = 7,
+      [3] = 12,
+      [4] = 11,
+      [5] = 10,
+      [6] = 13,
+      texture = "opencomputers:AdapterSide"
+    },
+    [9] = {
+      [1] = 3,
+      [2] = 7,
+      [3] = 7,
+      [4] = 4,
+      [5] = 9,
+      [6] = 11,
+      tint = 27968,
+      texture = "quartz_block_top"
+    },
+    [10] = {
+      [1] = 12,
+      [2] = 7,
+      [3] = 7,
+      [4] = 13,
+      [5] = 9,
+      [6] = 11,
+      tint = 27968,
+      texture = "quartz_block_top"
+    },
+    [11] = {
+      [1] = 12,
+      [2] = 6,
+      [3] = 8,
+      [4] = 13,
+      [5] = 10,
+      [6] = 10,
+      tint = 27968,
+      texture = "quartz_block_top"
+    },
+    [12] = {
+      [1] = 13,
+      [2] = 8,
+      [3] = 9,
+      [4] = 14,
+      [5] = 14,
+      [6] = 10,
+      tint = 27968,
+      texture = "quartz_block_top"
+    },
+    [13] = {
+      [1] = 13,
+      [2] = 14,
+      [3] = 9,
+      [4] = 14,
+      [5] = 15,
+      [6] = 10,
+      tint = 16711680,
+      texture = "quartz_block_top"
+    },
+    [14] = {
+      [1] = 7,
+      [2] = 0,
+      [3] = 7,
+      [4] = 9,
+      [5] = 5,
+      [6] = 11,
+      tint = 986895,
+      texture = "quartz_block_top"
+    },
+    [15] = {
+      [1] = 6,
+      [2] = 0,
+      [3] = 8,
+      [4] = 10,
+      [5] = 5,
+      [6] = 10,
+      tint = 986895,
+      texture = "quartz_block_top"
+    },
+    [16] = {
+      [1] = 4,
+      [2] = 3,
+      [3] = 8,
+      [4] = 6,
+      [5] = 4,
+      [6] = 9,
+      tint = 18816,
+      texture = "quartz_block_top"
+    },
+    [17] = {
+      [1] = 3,
+      [2] = 1,
+      [3] = 8,
+      [4] = 4,
+      [5] = 3,
+      [6] = 9,
+      tint = 18816,
+      texture = "quartz_block_top"
+    },
+    [18] = {
+      [1] = 4,
+      [2] = 0,
+      [3] = 8,
+      [4] = 5,
+      [5] = 1,
+      [6] = 9,
+      tint = 18816,
+      texture = "quartz_block_top"
+    },
+    [19] = {
+      [1] = 5,
+      [2] = 4,
+      [3] = 3,
+      [4] = 6,
+      [5] = 5,
+      [6] = 5,
+      tint = 3398655,
+      texture = "opencomputers:PowerConverterSide"
+    },
+    [20] = {
+      [1] = 10,
+      [2] = 4,
+      [3] = 3,
+      [4] = 11,
+      [5] = 5,
+      [6] = 5,
+      tint = 3398655,
+      texture = "opencomputers:PowerConverterSide"
+    },
+    [21] = {
+      [1] = 6,
+      [2] = 3,
+      [3] = 3,
+      [4] = 10,
+      [5] = 4,
+      [6] = 4,
+      tint = 3398655,
+      texture = "opencomputers:PowerConverterSide"
+    }
+  },
+  label = "Robot T-64",
+  emitRedstone = false
+}
