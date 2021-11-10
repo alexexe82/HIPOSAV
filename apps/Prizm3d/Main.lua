@@ -314,9 +314,9 @@ for i = 1+mnogitel, lmno do
  
  -- кнопка отображения на проектор
  listok[lst]:addChild(GUI.framedButton(xwd - 11, y-1, width, 3, 0x696969, 0x00B600, 0x880000, 0x880000, "Holo")).onTouch = function()
-    filen = kat[i][1] .. ".3d"
-   if fs.exists("/3dholo/" .. filen) then
-    loadF("/3dholo/" .. filen)
+    
+   if fs.exists("/3dholo/" .. kat[i][1] .. ".3d") then
+    loadF("/3dholo/" .. kat[i][1] .. ".3d")
 	drawHologram()
    end
 	
