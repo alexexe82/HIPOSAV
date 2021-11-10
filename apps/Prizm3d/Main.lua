@@ -315,11 +315,15 @@ for i = 1+mnogitel, lmno do
  -- кнопка отображения на проектор
  listok[lst]:addChild(GUI.framedButton(xwd - 11, y-1, width, 3, 0x696969, 0x00B600, 0x880000, 0x880000, "Holo")).onTouch = function()
     filen = kat[i][1] .. ".3d"
+   if fs.exists(filen) then
+    loadF("/3dholo/" .. filen)
+	drawHologram()
+   end
+	
     --workspace:draw()
     --internet.download("https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/3dholo/" .. filen, "/3dholo/" .. filen)
     --GUI.alert("Загрузка завершена! Файл находится по адресу /3dholo/" .. filen)
-	loadF("/3dholo/" .. filen)
-	drawHologram()
+	
 	
   end
  
