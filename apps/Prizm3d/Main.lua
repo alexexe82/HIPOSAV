@@ -318,6 +318,8 @@ for i = 1+mnogitel, lmno do
    if fs.exists("/3dholo/" .. kat[i][1] .. ".3d") then
     loadF("/3dholo/" .. kat[i][1] .. ".3d")
 	drawHologram()
+   else
+     GUI.alert("Файла нет или поврежден. Скачайте голограмму кнопкой DOWNLD")
    end
 	
     --workspace:draw()
