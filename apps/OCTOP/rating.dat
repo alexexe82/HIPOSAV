@@ -3,43 +3,74 @@
 name = "SofQ",
 site = "guild-bt.ru",
 vers = "1.7.10",
-opis1 = "opencomputers",
-opis2 = "whitelist, pve",
-opis3 = "no wipes"
+opis1 = "openComputers, mekanism, immersive engineering",
+opis2 = "ic2, railcraft, buildcraft, forestry + addons",
+opis3 = "whitelist, pve, no wipes"
+},
+{
+name = "HITechCraft",
+site = "shadowcraft.ru",
+vers = "1.7.10",
+opis1 = "openComputers, ae2, projectRed",
+opis2 = "ic2, buildcraft, forestry + addons",
+opis3 = "pvp, wipes"
 },
 {
 name = "HITech",
 site = "shadowcraft.ru",
-vers = "1.7.10",
-opis1 = "opencomputers",
-opis2 = "pvp",
-opis3 = "wipes"
+vers = "1.12.2",
+opis1 = "openComputers, ae2, fluxNetworks",
+opis2 = "ic2, forestry + addons",
+opis3 = "pvp, wipes"
 },
 {
 name = "INDUSTRY",
 site = "lemoncraft.ru",
 vers = "1.7.10",
-opis1 = "opencomputers",
-opis2 = "pvp?",
+opis1 = "openComputers, immersive engineering, ic2",
+opis2 = "buildcraft, enderIO, forestry, ae2",
+opis3 = "wipes"
+},
+{
+name = "INDUSTRY 2",
+site = "lemoncraft.ru",
+vers = "1.7.10",
+opis1 = "openComputers, mekanism, ic2, ae2, bigReactors",
+opis2 = "immersive engineering, enderIO, forestry",
 opis3 = "wipes"
 },
 {
 name = "HITech",
 site = "sidemc.net",
 vers = "1.7.10",
-opis1 = "opencomputers",
-opis2 = "pvp",
-opis3 = "wipes"
+opis1 = "openComputers, ae2, projectRed",
+opis2 = "ic2, buildcraft, forestry + addons",
+opis3 = "pvp, wipes"
+},
+{
+name = "HITech",
+site = "sidemc.net",
+vers = "1.12.2",
+opis1 = "openComputers, ae2, fluxNetworks",
+opis2 = "ic2, forestry + addons",
+opis3 = "pvp, wipes"
 },
 {
 name = "HIPower",
 site = "hil.su",
 vers = "1.12.2",
-opis1 = "opencomputers",
-opis2 = "pvp",
-opis3 = "no wipes"
+opis1 = "openComputers, ae2, mekanism",
+opis2 = "cyberware, enderIO",
+opis3 = "pvp, no wipes"
 },
-
+{
+name = "HITech",
+site = "hil.su",
+vers = "1.12.2",
+opis1 = "openComputers, ae2, mekanism, forestry",
+opis2 = "immersive engineering, buildcraft, ic2",
+opis3 = "pvp, no wipes"
+},
 
 
 
