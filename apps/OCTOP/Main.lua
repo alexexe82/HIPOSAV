@@ -183,7 +183,7 @@ headerFooter()
 local listok = {}
 local x, y, width, horizontalSpace, verticalSpace = 45, 3, 10, 2, 0
 local mnogitel = 0
-local lststr = math.ceil((wrkspcY-15) / 6) -- тут 4 это ширина строки увеличивать вручную плюс 2 строки описания а 5 это отступ от верха прибавляем еще 10-------------------------------------------------------
+local lststr = math.ceil((wrkspcY-11) / 6) -- тут 4 это ширина строки увеличивать вручную плюс 2 строки описания а 5 это отступ от верха прибавляем еще 10-------------------------------------------------------
 local lstmax = math.ceil(#kat / lststr)
 --local colred =  0xB62B00
 local colred =  0xFFFFFF
@@ -203,7 +203,7 @@ function displist()
  listok = {}
  x, y, width, horizontalSpace, verticalSpace = 45, 3, 10, 2, 0     
  mnogitel = 0
- lststr = math.ceil((wrkspcY-15) / 6) -- тут 4 это ширина строки увеличивать вручную плюс 2 строки описания---- для просчета листов---------------------------------------------------
+ lststr = math.ceil((wrkspcY-11) / 6) -- тут 4 это ширина строки увеличивать вручную плюс 2 строки описания---- для просчета листов---------------------------------------------------
  lstmax = math.ceil(#kat / lststr)
  colred =  0xFFFFFF
 for lst = 1, lstmax do --lst записываем на каждый лист данные из kat
