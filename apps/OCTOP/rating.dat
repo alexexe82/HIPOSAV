@@ -8,15 +8,37 @@ opis2 = "whitelist, pve",
 opis3 = "no wipes"
 },
 {
-name = "SofQ2",
-site = "guild-bt.ru",
+name = "HITech",
+site = "shadowcraft.ru",
 vers = "1.7.10",
 opis1 = "opencomputers",
-opis2 = "whitelist, pve",
+opis2 = "pvp",
+opis3 = "wipes"
+},
+{
+name = "INDUSTRY",
+site = "lemoncraft.ru",
+vers = "1.7.10",
+opis1 = "opencomputers",
+opis2 = "pvp?",
+opis3 = "wipes"
+},
+{
+name = "HITech",
+site = "sidemc.net",
+vers = "1.7.10",
+opis1 = "opencomputers",
+opis2 = "pvp",
+opis3 = "wipes"
+},
+{
+name = "HIPower",
+site = "hil.su",
+vers = "1.12.2",
+opis1 = "opencomputers",
+opis2 = "pvp",
 opis3 = "no wipes"
 },
-
-
 
 
 
