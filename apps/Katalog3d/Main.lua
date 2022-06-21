@@ -147,6 +147,10 @@ kat = {
 {"bigcooler", "Большой вентилятор (2 блока)",2},
 {"cd80", "Проигрыватель пластинок на винтажном столике"},
 {"robot", "Домашний робот-разнорабочий (2 блока)",2},
+{"batman", "Прожектор Бэтмен помоги"},
+{"marketCar", "Тележка из супермаркета"},
+{"snooppy", "Собачка чихуа-хуа Снуппи"},
+{"soltime", "Солнечные часы"},
 }
 elseif ru == 0 then
  lclz = {
@@ -256,6 +260,10 @@ alertFiles = "the download is complete. the files are located along the path /3d
 {"bigcooler", "Large fan (2 blocks)",2},
 {"cd80", "A record player on an antique table"},
 {"robot", "Home robot handyman (2 blocks)",2},
+{"batman", "Batman help me"},
+{"marketCar", "shoping cart"},
+{"snooppy", "dog snooppy"},
+{"soltime", "sundial"},
 }
 end
 end 
