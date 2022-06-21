@@ -71,8 +71,30 @@ opis1 = "openComputers, ae2, mekanism, forestry",
 opis2 = "immersive engineering, buildcraft, ic2",
 opis3 = "pvp, no wipes"
 },
-
-
+{
+name = "HITech#1 #2 #3",
+site = "mcskill.net",
+vers = "1.7.10",
+opis1 = "openComputers, ae2, forestry + addons",
+opis2 = "projectRed, buildcraft, ic2",
+opis3 = "pvp, wipes"
+},
+{
+name = "HITech#1 #2",
+site = "mcskill.net",
+vers = "1.12.2",
+opis1 = "openComputers, ae2, forestry",
+opis2 = "enderIO, fluxNetworks, ic2",
+opis3 = "pve, wipes"
+},
+{
+name = "HITechClassic",
+site = "mcskill.net",
+vers = "1.7.10",
+opis1 = "openComputers, ae2, forestry + addons",
+opis2 = "projectRed + addons, enderIO, ic2",
+opis3 = "pvp, wipes"
+},
 
 
 
