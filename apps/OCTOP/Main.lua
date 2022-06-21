@@ -61,7 +61,7 @@ opis3 = "no wipes"
 ru = 1
 
 
-function loadKat()
+local function loadKat()
     internet.download("https://raw.githubusercontent.com/alexexe82/HIPOSAV/master/apps/OCTOP/rating.dat", "/OCTOP/rating.dat")
 end
 
@@ -73,7 +73,7 @@ end
 
 
 
-function ruen()
+local function ruen()
 
 if ru == 1 then
 
@@ -119,13 +119,13 @@ local wrkspcX = workspaceXY.width - 2
 local wrkspcY = workspaceXY.height - 1
 local strZ = lclz.strZruen
 local linewd =  "╠════════════════════╬══════════════════════╬═════════╬"
-for i = 1,wrkspcX - 115 do
+for i = 1,wrkspcX - 110 do
  linewd = linewd.."═"
 end
  linewd = linewd.."╣"
  
 local lineser = "║                    ║                      ║         ║"
-for i = 1,wrkspcX - 115 do
+for i = 1,wrkspcX - 110 do
  lineser = lineser.." "
 end
  lineser = lineser.."║"
@@ -134,15 +134,17 @@ end
 local workspace, window = system.addWindow(GUI.titledWindow(1, 1, wrkspcX, wrkspcY - 1, "OpenComputers Servers "..Version, true))
 
 
-window:addChild(GUI.framedButton(10, 13, 18, 3, 0x696969, 0x00B600, 0x880000, 0x880000, "ОБНОВИТЬ")).onTouch = function()
+window:addChild(GUI.roundedButton(10, 13, 18, 3, 0x696969, 0x00B600, 0x880000, 0x880000, "ОБНОВИТЬ")).onTouch = function()
 loadKat()
 readKat()
+
 displist()
 end
 
-window:addChild(GUI.framedButton(10, 17, 18, 3, 0x696969, 0x00B600, 0x880000, 0x880000, "REFRESH")).onTouch = function()
+window:addChild(GUI.roundedButton(10, 17, 18, 3, 0x696969, 0x00B600, 0x880000, 0x880000, "REFRESH")).onTouch = function()
 loadKat()
 readKat()
+
 displist()
 end
 
@@ -162,7 +164,7 @@ end
 
 -- filesystem.exists(string path): boolean exists
 
-function headerFooter()
+local function headerFooter()
 window:addChild(GUI.text(3,wrkspcY-14, 0x004980, text.limit(lclz.head1,40)))
 window:addChild(GUI.text(3,wrkspcY-13, 0x004980, text.limit(lclz.head2,40)))
 window:addChild(GUI.text(3,wrkspcY-12, 0x004980, text.limit(lclz.head3,40)))
@@ -181,7 +183,7 @@ window:addChild(GUI.image((window.width/2)-55, 3, logo))
 headerFooter()
 
 local listok = {}
-local x, y, width, horizontalSpace, verticalSpace = 45, 3, 10, 2, 0
+local x, y, width, horizontalSpace, verticalSpace = 40, 3, 10, 2, 0
 local mnogitel = 0
 local lststr = math.ceil((wrkspcY-11) / 6) -- тут 4 это ширина строки увеличивать вручную плюс 2 строки описания а 5 это отступ от верха прибавляем еще 10-------------------------------------------------------
 local lstmax = math.ceil(#kat / lststr)
@@ -201,7 +203,7 @@ function displist()
  listok = {}
  listok = nil
  listok = {}
- x, y, width, horizontalSpace, verticalSpace = 45, 3, 10, 2, 0     
+ x, y, width, horizontalSpace, verticalSpace = 40, 3, 10, 2, 0     
  mnogitel = 0
  lststr = math.ceil((wrkspcY-11) / 6) -- тут 4 это ширина строки увеличивать вручную плюс 2 строки описания---- для просчета листов---------------------------------------------------
  lstmax = math.ceil(#kat / lststr)
@@ -238,9 +240,9 @@ for i = 1+mnogitel, lmno do
    -- версия кат[n].vers
   listok[lst]:addChild(GUI.text(x + 46, y + 2, 0xCC9200, text.limit(kat[i].vers,10)))
   -- описание кат[n].opis1 2 3
-  listok[lst]:addChild(GUI.text(x + 56, y + 1, 0x696969, text.limit(kat[i].opis1,wrkspcX- 116)))
-  listok[lst]:addChild(GUI.text(x + 56, y + 2, 0x696969, text.limit(kat[i].opis2,wrkspcX- 116)))
-  listok[lst]:addChild(GUI.text(x + 56, y + 3, 0x696969, text.limit(kat[i].opis3,wrkspcX- 116)))
+  listok[lst]:addChild(GUI.text(x + 56, y + 1, 0x696969, text.limit(kat[i].opis1,wrkspcX- 111)))
+  listok[lst]:addChild(GUI.text(x + 56, y + 2, 0x696969, text.limit(kat[i].opis2,wrkspcX- 111)))
+  listok[lst]:addChild(GUI.text(x + 56, y + 3, 0x696969, text.limit(kat[i].opis3,wrkspcX- 111)))
   
   y =  y + verticalSpace + 4 -- смещение на сколько строк вниз
  
