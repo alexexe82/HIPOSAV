@@ -61,7 +61,7 @@ site = "hil.su",
 vers = "1.12.2",
 opis1 = "openComputers, ae2, mekanism",
 opis2 = "cyberware, enderIO",
-opis3 = "pvp, no wipes"
+opis3 = "pvp, wipes"
 },
 {
 name = "HITech",
@@ -69,7 +69,7 @@ site = "hil.su",
 vers = "1.12.2",
 opis1 = "openComputers, ae2, mekanism, forestry",
 opis2 = "immersive engineering, buildcraft, ic2",
-opis3 = "pvp, no wipes"
+opis3 = "pvp, wipes"
 },
 {
 name = "HITech#1 #2 #3",
