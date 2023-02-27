@@ -95,7 +95,21 @@ opis1 = "openComputers, ae2, forestry + addons",
 opis2 = "projectRed + addons, enderIO, ic2",
 opis3 = "pvp, wipes"
 },
-
-
+{
+name = "HITech#1 #2 #3",
+site = "loliland.ru",
+vers = "1.7.10",
+opis1 = "openComputers, ae2, forestry + addons",
+opis2 = "projectRed, ic2, Mekanism, Immersive Engineering",
+opis3 = "pvp, wipes"
+},
+{
+name = "UltraTech#1 #2",
+site = "loliland.ru",
+vers = "1.7.10",
+opis1 = "openComputers, ae2, forestry + addons",
+opis2 = "enderIO, projectRed, ic2, galacticraft",
+opis3 = "pvp, wipes"
+},
 
 }
